@@ -170,9 +170,11 @@ const hasEquirectangularImage = Boolean(
 					</div>
 				</div>
 				<div class="actions-primary">
-					<button type="button" class="highlight" data-open-fullscreen>Ver imagen a pantalla completa</button>
-					{hasEquirectangularImage && sphericalPublicPath && (
-						<a class="highlight" href={toBasePath(`planetas/${planet.slug}/aterrizar?img=${encodeURIComponent(sphericalPublicPath)}`)} target="_blank" rel="noopener noreferrer">Aterrizar en el planeta</a>
+					<button type="button" class="highlight" data-open-fullscreen title="Click para ver el planeta a pantalla completa">Ver imagen a pantalla completa</button>
+					{hasEquirectangularImage && sphericalPublicPath ? (
+						<a class="highlight" href={toBasePath(`planetas/${planet.slug}/aterrizar?img=${encodeURIComponent(sphericalPublicPath)}`)} target="_blank" rel="noopener noreferrer" title="Click para aterrizar en este planeta">Aterrizar en el planeta</a>
+					) : (
+						<button type="button" class="highlight" disabled aria-disabled="true" title="Click para aterrizar en este planeta">Aterrizar en el planeta</button>
 					)}
 				</div>
 				<div class="actions-secondary">
