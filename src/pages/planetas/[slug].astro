@@ -371,10 +371,60 @@ const shareDescription =
 			const sharePlanet = async () => {
 				const shareUrl = window.location.href;
 				const shareTitle = document.title;
+				const shareText = `Descubre ${shareTitle}`;
+
+				const tryShareWithImage = async () => {
+					const imageUrl = mainImage?.getAttribute('src');
+					if (!imageUrl || !navigator.canShare) {
+						return false;
+					}
+
+					try {
+						const response = await fetch(imageUrl);
+						if (!response.ok) {
+							return false;
+						}
+
+						const blob = await response.blob();
+						const fileType = blob.type || 'image/jpeg';
+						const extension = (fileType.split('/')[1] || 'jpg').split(';')[0];
+						const safeTitle = shareTitle
+							.toLowerCase()
+							.replace(/[^a-z0-9]+/g, '-')
+							.replace(/^-+|-+$/g, '') || 'miniplaneta';
+						const imageFile = new File([blob], `${safeTitle}.${extension}`, {
+							type: fileType,
+						});
+
+						if (!navigator.canShare({ files: [imageFile] })) {
+							return false;
+						}
+
+						await navigator.share({
+							title: shareTitle,
+							text: shareText,
+							url: shareUrl,
+							files: [imageFile],
+						});
+
+						return true;
+					} catch {
+						return false;
+					}
+				};
 
 				if (navigator.share) {
 					try {
-						await navigator.share({ title: shareTitle, url: shareUrl });
+						const sharedWithImage = await tryShareWithImage();
+						if (sharedWithImage) {
+							return;
+						}
+
+						await navigator.share({
+							title: shareTitle,
+							text: shareText,
+							url: shareUrl,
+						});
 						return;
 					} catch (error) {
 						if (error && error.name === 'AbortError') {
