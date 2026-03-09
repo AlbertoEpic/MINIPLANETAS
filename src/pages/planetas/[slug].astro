@@ -109,7 +109,9 @@ const shareIcon = toBasePath('compartir.png');
 const siteUrl = Astro.site ?? new URL('https://albertoepic.github.io');
 const planetRelativeUrl = toBasePath(`planetas/${planet.slug}`);
 const planetAbsoluteUrl = new URL(planetRelativeUrl, siteUrl).toString();
-const shareImageAbsoluteUrl = new URL(toAssetPath(planet.image), siteUrl).toString();
+const shareImagePath = planet.image.replace('/planets/', '/planets-share/');
+const shareImageUrl = toAssetPath(shareImagePath);
+const shareImageAbsoluteUrl = new URL(shareImageUrl, siteUrl).toString();
 const shareDescription =
 	planet.description.length > 200
 		? `${planet.description.slice(0, 197)}...`
@@ -164,7 +166,7 @@ const shareDescription =
 
 		<main class="planet-view">
 			<section class="visual">
-				<img src={toAssetPath(planet.image)} alt={`Vista grande de ${planet.name}`} loading="eager" data-main-image />
+				<img src={toAssetPath(planet.image)} alt={`Vista grande de ${planet.name}`} loading="eager" data-main-image data-share-src={shareImageUrl} />
 			</section>
 
 			<section class="story">
@@ -374,7 +376,7 @@ const shareDescription =
 				const shareText = `Descubre ${shareTitle}`;
 
 				const tryShareWithImage = async () => {
-					const imageUrl = mainImage?.getAttribute('src');
+					const imageUrl = mainImage?.getAttribute('data-share-src') || mainImage?.getAttribute('src');
 					if (!imageUrl || !navigator.canShare) {
 						return false;
 					}
