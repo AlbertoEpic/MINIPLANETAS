@@ -724,6 +724,11 @@ const shareDescription =
 	}
 	.lead.is-collapsed {
 		overflow: hidden;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3;
+		line-clamp: 3;
+		text-overflow: ellipsis;
 		max-height: calc(1.7em * 3);
 	}
 	.lead-toggle {
