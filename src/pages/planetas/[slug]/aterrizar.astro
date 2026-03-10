@@ -1,7 +1,5 @@
 ---
 import { planetData } from '../../../data/planets';
-import { existsSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
 
 export function getStaticPaths() {
 	return planetData.map((planet) => ({
@@ -19,11 +17,16 @@ const toPublicAssetPath = (path = '') =>
 	typeof path === 'string' && normalizedBase && path.startsWith(`${normalizedBase}/`)
 		? path.slice(normalizedBase.length)
 		: path;
-const imageParam = Astro.url.searchParams.get('img');
+const imageParam = Astro.url.searchParams.get('img') ?? undefined;
 
-const isValidPanoPath = (path) =>
-	Boolean(toPublicAssetPath(path)?.startsWith('/pano360/')) &&
-		existsSync(fileURLToPath(new URL(`../../../../public${toPublicAssetPath(path)}`, import.meta.url)));
+const knownPanoPaths = new Set(
+	planetData
+		.map((item) => toPublicAssetPath(item.image360 || ''))
+		.filter((path): path is string => typeof path === 'string' && path.startsWith('/pano360/'))
+);
+
+const isValidPanoPath = (path: string | undefined) =>
+	knownPanoPaths.has(toPublicAssetPath(path || ''));
 
 const planetPanoImage = isValidPanoPath(planet.image360) ? planet.image360 : null;
 const queryPanoImage = isValidPanoPath(imageParam) ? imageParam : null;

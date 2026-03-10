@@ -11,8 +11,8 @@ const toBasePath = (path = '') => `${normalizedBase}/${path.replace(/^\/+/, '')}
 <html lang="es">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href={toBasePath('favicon.svg')} />
-		<link rel="icon" href={toBasePath('favicon.ico')} />
+		<link rel="icon" type="image/png" href={toBasePath('faviconMP.png')} />
+		<link rel="shortcut icon" type="image/png" href={toBasePath('faviconMP.png')} />
 		<meta name="viewport" content="width=device-width" />
 		<title>MINIPLANETAS | Sobre el creador</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,7 +24,10 @@ const toBasePath = (path = '') => `${normalizedBase}/${path.replace(/^\/+/, '')}
 	</head>
 	<body>
 		<header class="top">
-			<a class="brand" href={toBasePath('')}>MINIPLANETAS</a>
+			<a class="brand" href={toBasePath('')}>
+				<img src={toBasePath('logoMiniPlanetas.png')} alt="" class="brand-logo" aria-hidden="true" />
+				<span class="brand-text">MINIPLANETAS</span>
+			</a>
 			<button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="main-nav" aria-expanded="false">
 				<span></span>
 				<span></span>
@@ -152,7 +155,21 @@ const toBasePath = (path = '') => `${normalizedBase}/${path.replace(/^\/+/, '')}
 		backdrop-filter: blur(14px);
 		border-bottom: 1px solid var(--stroke);
 	}
-	.brand { font-family: 'Fraunces', serif; letter-spacing: .22em; text-transform: uppercase; font-size: .9rem; }
+	.brand {
+		display: inline-flex;
+		align-items: center;
+		gap: .5rem;
+		font-family: 'Fraunces', serif;
+		letter-spacing: .22em;
+		text-transform: uppercase;
+		font-size: .9rem;
+	}
+	.brand-logo {
+		width: 3rem;
+		height: 3rem;
+		margin-block: -0.2rem;
+		object-fit: contain;
+	}
 	.top-nav { display: flex; gap: 1.2rem; }
 	.menu-toggle {
 		display: none;
