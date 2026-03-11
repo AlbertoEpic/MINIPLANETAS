@@ -2,9 +2,9 @@
 import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
-const isProd = process.env.NODE_ENV === 'production';
+const isBuild = process.argv.includes('build');
 
 export default defineConfig({
 	site: 'https://albertoepic.github.io',
-	base: isProd ? '/MINIPLANETAS' : '/',
+	base: isBuild ? '/MINIPLANETAS' : '/',
 });
