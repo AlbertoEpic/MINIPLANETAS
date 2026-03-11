@@ -82,6 +82,12 @@ const toBasePath = (path = '') => `${normalizedBase}/${path.replace(/^\/+/, '')}
 					/>
 				</figure>
 			</section>
+			<blockquote class="impact-quote" aria-label="Cita destacada">
+				<p>
+					Se trata no tanto de ver lo que aún nadie ha visto, sino de pensar lo que aún
+					nadie ha pensado sobre aquello que todos ven...
+				</p>
+			</blockquote>
 			<aside class="creator-highlight" aria-label="Dato destacado del creador">
 				<div class="creator-highlight-media">
 					<img
@@ -289,6 +295,63 @@ const toBasePath = (path = '') => `${normalizedBase}/${path.replace(/^\/+/, '')}
 	.creator-photo-desktop { display: block !important; }
 	p { margin: 0; color: var(--muted); line-height: 1.7; }
 	.actions { display: flex; gap: .7rem; flex-wrap: wrap; margin-top: .5rem; }
+	.impact-quote {
+		position: relative;
+		margin: 1.2rem 0 0;
+		padding: 1rem 1.1rem 1rem 1.4rem;
+		border-left: 4px solid var(--accent);
+		border-radius: .8rem;
+		background:
+			radial-gradient(circle at 0% 0%, rgba(255, 183, 77, .24), transparent 55%),
+			rgba(12, 10, 24, .72);
+		box-shadow: 0 12px 24px rgba(0, 0, 0, .18);
+		opacity: 0;
+		transform: translateY(16px);
+		animation: quoteReveal 760ms cubic-bezier(.2, .8, .2, 1) 220ms forwards;
+	}
+	.impact-quote p {
+		margin: 0;
+		font-family: 'Fraunces', serif;
+		font-size: clamp(1.05rem, 2.2vw, 1.5rem);
+		line-height: 1.35;
+		color: #fff1d8;
+		text-wrap: pretty;
+	}
+	.impact-quote p::before {
+		content: '“';
+		font-size: 1.6em;
+		line-height: .1;
+		margin-right: .12em;
+		vertical-align: -.16em;
+		color: var(--accent);
+	}
+	.impact-quote p::after {
+		content: '”';
+		font-size: 1.6em;
+		line-height: .1;
+		margin-left: .08em;
+		vertical-align: -.16em;
+		color: var(--accent);
+	}
+
+	@keyframes quoteReveal {
+		from {
+			opacity: 0;
+			transform: translateY(16px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.impact-quote {
+			opacity: 1;
+			transform: none;
+			animation: none;
+		}
+	}
 	.creator-highlight {
 		display: flex;
 		gap: .85rem;
