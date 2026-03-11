@@ -45,7 +45,7 @@ const toBasePath = (path = '') => `${normalizedBase}/${path.replace(/^\/+/, '')}
 			<section class="about-layout">
 				<div class="about-copy">
 					<p class="eyebrow">Sobre el creador</p>
-					<h1>La mirada detras de cada orbita</h1>
+					<h1>La mirada detrás de cada órbita</h1>
 					<figure class="creator-photo creator-photo-mobile">
 						<Image
 							src={creatorPhoto}
@@ -60,17 +60,17 @@ const toBasePath = (path = '') => `${normalizedBase}/${path.replace(/^\/+/, '')}
 						luz justa y rescatar detalles que suelen pasar desapercibidos.
 					</p>
 					<p>
-						Cada escena se trabaja para conservar su atmosfera original y, al mismo tiempo,
-						convertirse en un pequeno mundo que invita a detenerse, imaginar y volver a mirar.
+						Cada escena se trabaja para conservar su atmósfera original y, al mismo tiempo,
+						convertirse en un pequeño mundo que invita a detenerse, imaginar y volver a mirar.
 					</p>
 					<p>
-						Este proyecto une sensibilidad visual y tecnica fotografica para crear una coleccion
+						Este proyecto une sensibilidad visual y técnica fotográfica para crear una colección
 						donde cada mini-planeta tiene identidad propia.
 					</p>
-					<div class="actions">
-						<a class="back" href={toBasePath('')}>Volver a portada</a>
-						<a class="back secondary" href={toBasePath('catalogo')}>Ir al catalogo</a>
-					</div>
+					<p>
+						Entre rutas, cumbres y rincones escondidos, cada salida se convierte en una
+						oportunidad para descubrir nuevas perspectivas y seguir ampliando este universo.
+					</p>
 				</div>
 				<figure class="creator-photo creator-photo-desktop">
 					<Image
@@ -82,6 +82,51 @@ const toBasePath = (path = '') => `${normalizedBase}/${path.replace(/^\/+/, '')}
 					/>
 				</figure>
 			</section>
+			<aside class="creator-highlight" aria-label="Dato destacado del creador">
+				<div class="creator-highlight-media">
+					<img
+						src={toBasePath('creadorMP2.jpg')}
+						alt="Alberto durante una sesión de captura"
+						class="creator-highlight-img"
+						loading="lazy"
+					/>
+				</div>
+				<div class="creator-highlight-copy">
+					<p class="creator-highlight-kicker">Mirada personal</p>
+					<h2>AlbertoEpic convierte escenas reales en pequeños universos</h2>
+					<p>
+						AlbertoEpic es un superhéroe de todo a cien, siempre haciendo superheroicidades
+						aquí y allá, velando para que el bien triúnfe sobre el mal. 😜
+					</p>
+					<p>
+						Amante de los gadgets, quizá algún día te lo encuentres por el monte, en su
+						hábitat natural, cargado de cámaras, drones y demás artilugios tecnológicos. En
+						ese caso, mantén la calma, no es agresivo si actúas con naturalidad. Nunca dice
+						que no a una buena charla.
+					</p>
+					<p>
+						Famoso por su legendario autocontrol en todo tipo de situaciones, muestra
+						comportamientos antagónicos: apasionado de cualquier actividad física que se
+						realice al aire libre, preferiblemente en parejas, y canse lo suficiente. Pero
+						también es capaz de desaparecer del mundo enfrascado en cualquier proyecto con
+						su ordenador...
+					</p>
+					<p>
+						Como todo superhéroe, tiene su kriptonita: los pedales y los esquís! <br>BTT y Skimo
+						son sus principales medios de desplazamiento por el monte.
+					</p>
+					<img
+						src={toBasePath('firma.png')}
+						alt="Firma del creador"
+						class="creator-signature"
+						loading="lazy"
+					/>
+				</div>
+			</aside>
+			<div class="actions">
+				<a class="back" href={toBasePath('')}>Volver a portada</a>
+				<a class="back secondary" href={toBasePath('catalogo')}>Ir al catalogo</a>
+			</div>
 		</main>
 		<footer class="footer">
 			<p>(c) 2026 MINIPLANETAS .:. SQLP .:. Made with love in Tierz for the entire Universe...</p>
@@ -244,6 +289,62 @@ const toBasePath = (path = '') => `${normalizedBase}/${path.replace(/^\/+/, '')}
 	.creator-photo-desktop { display: block !important; }
 	p { margin: 0; color: var(--muted); line-height: 1.7; }
 	.actions { display: flex; gap: .7rem; flex-wrap: wrap; margin-top: .5rem; }
+	.creator-highlight {
+		display: flex;
+		gap: .85rem;
+		align-items: stretch;
+		padding: 1rem;
+		margin-top: 1.2rem;
+		border-radius: .9rem;
+		background: linear-gradient(140deg, rgba(255, 183, 77, .22), rgba(77, 208, 225, .14));
+		border: 1px solid rgba(255, 255, 255, .22);
+	}
+	.creator-highlight-media {
+		flex: 0 0 auto;
+		align-self: stretch;
+		aspect-ratio: 1 / 1;
+		height: auto;
+		min-width: 220px;
+	}
+	.creator-highlight-img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		max-height: none;
+		object-fit: cover;
+		border-radius: .65rem;
+		border: 1px solid rgba(255, 255, 255, .2);
+	}
+	.creator-highlight-copy {
+		display: grid;
+		gap: .35rem;
+		flex: 1 1 auto;
+		--paragraph-width: 100%;
+	}
+	.creator-signature {
+		justify-self: end;
+		width: 150px;
+		height: auto;
+		margin-top: .35rem;
+		margin-right: calc(var(--paragraph-width) * 0.12);
+		opacity: .96;
+	}
+	.creator-highlight-kicker {
+		margin: 0;
+		font-size: .68rem;
+		text-transform: uppercase;
+		letter-spacing: .18em;
+		color: #ffe1b0;
+	}
+	.creator-highlight h2 {
+		margin: 0;
+		font-family: 'Fraunces', serif;
+		font-size: clamp(1rem, 2vw, 1.2rem);
+		line-height: 1.25;
+	}
+	.creator-highlight p {
+		margin: 0;
+	}
 	.back {
 		justify-self: start;
 		padding: .6rem 1rem;
@@ -259,6 +360,17 @@ const toBasePath = (path = '') => `${normalizedBase}/${path.replace(/^\/+/, '')}
 	}
 
 	@media (max-width: 900px) {
+		.creator-highlight {
+			flex-direction: column;
+			padding: .9rem;
+		}
+		.creator-highlight-media {
+			width: 100%;
+			min-width: 0;
+		}
+		.creator-signature {
+			width: 150px;
+		}
 		.creator-photo-mobile { display: block !important; }
 		.creator-photo-desktop { display: none !important; }
 		.about-layout {
