@@ -10,14 +10,21 @@ type Planet = {
 	tone: string;
 	orbit: string;
 	size: string;
-};
-
-type PlanetProfile = {
 	location: string;
 	coordinates: string;
 	atmosphere: string[];
 	discoveryDate: string;
 	equipment: string;
+	sheet: {
+		location: string;
+		coordinates: string;
+		atmosphere: string[];
+		discoveryDate: string;
+		equipment: string;
+		tone: string;
+		orbit: string;
+		size: string;
+	};
 };
 
 export function getStaticPaths() {
@@ -38,62 +45,7 @@ const toPublicAssetPath = (path = '') =>
 	typeof path === 'string' && normalizedBase && path.startsWith(`${normalizedBase}/`)
 		? path.slice(normalizedBase.length)
 		: path;
-
-const planetProfiles: Record<string, PlanetProfile> = {
-	'planeta-alquezar': {
-		location: 'Alquézar, España',
-		coordinates: '42.1728, -0.0239',
-		atmosphere: ['Natural', 'Soleado', 'Sereno'],
-		discoveryDate: '2024-05-18',
-		equipment: 'Insta360 X3',
-	},
-	'planeta-bejenado': {
-		location: 'La Palma, España',
-		coordinates: '28.6905, -17.8567',
-		atmosphere: ['Volcánico', 'Natural', 'Dramático'],
-		discoveryDate: '2024-07-02',
-		equipment: 'GoPro Max',
-	},
-	'planeta-castillosaumur': {
-		location: 'Saumur, Francia',
-		coordinates: '47.2597, -0.0786',
-		atmosphere: ['Urbano', 'Histórico', 'Soleado'],
-		discoveryDate: '2024-04-11',
-		equipment: 'GoPro Hero 7 Black',
-	},
-	'planeta-castilloloarre': {
-		location: 'Loarre, España',
-		coordinates: '42.3247, -0.6247',
-		atmosphere: ['Natural', 'Histórico', 'Soleado'],
-		discoveryDate: '2026-02-18',
-		equipment: 'DJI Mini 5 Pro',
-	},
-	'planeta-anciles': {
-		location: 'Anciles',
-		coordinates: '42°35\'23.7"N 0°30\'34.3"E',
-		atmosphere: ['Natural'],
-		discoveryDate: '2026-03-08',
-		equipment: 'DJI Mini 5 Pro',
-	},
-	'planeta-vadiello': {
-		location: 'Vadiello, Huesca',
-		coordinates: '42.2900, -0.2000',
-		atmosphere: ['Natural'],
-		discoveryDate: '2021-01-24',
-		equipment: 'GoPro Hero 7 Black',
-	},
-};
-
-const defaultProfile: PlanetProfile = {
-	location: 'Ubicación por definir',
-	coordinates: '00.0000, 00.0000',
-	atmosphere: ['Natural'],
-	discoveryDate: '2025-01-01',
-	equipment: 'Cámara 360',
-};
-
-const profile = planetProfiles[planet.slug] ?? defaultProfile;
-const discoveryDate = new Date(profile.discoveryDate).toLocaleDateString('es-ES', {
+const discoveryDate = new Date(planet.sheet.discoveryDate).toLocaleDateString('es-ES', {
 	day: '2-digit',
 	month: 'long',
 	year: 'numeric',
@@ -187,29 +139,29 @@ const shareDescription =
 					</p>
 				)}
 				<div class="sheet">
-					<p><strong>Ubicación original:</strong> {profile.location}</p>
-					<p><strong>Coordenadas:</strong> {profile.coordinates}</p>
+					<p><strong>Ubicación original:</strong> {planet.sheet.location}</p>
+					<p><strong>Coordenadas:</strong> {planet.sheet.coordinates}</p>
 					<div class="atmosphere">
 						<strong>Atmósfera:</strong>
 						<ul>
-							{profile.atmosphere.map((tag: string) => <li>{tag}</li>)}
+							{planet.sheet.atmosphere.map((tag: string) => <li>{tag}</li>)}
 						</ul>
 					</div>
 					<p><strong>Fecha de descubrimiento:</strong> {discoveryDate}</p>
-					<p><strong>Equipo técnico:</strong> {profile.equipment}</p>
+					<p><strong>Equipo técnico:</strong> {planet.sheet.equipment}</p>
 				</div>
 				<div class="meta">
 					<div>
 						<span>Tono</span>
-						<strong>{planet.tone}</strong>
+						<strong>{planet.sheet.tone}</strong>
 					</div>
 					<div>
 						<span>Órbita</span>
-						<strong>{planet.orbit}</strong>
+						<strong>{planet.sheet.orbit}</strong>
 					</div>
 					<div>
 						<span>Escala</span>
-						<strong>{planet.size}</strong>
+						<strong>{planet.sheet.size}</strong>
 					</div>
 				</div>
 				<div class="actions-primary actions-primary-inline">
@@ -844,6 +796,7 @@ const shareDescription =
 		background: rgba(18, 12, 32, .62);
 	}
 	.sheet p { margin: 0; }
+	.sheet strong { color: #fff; }
 	.atmosphere {
 		display: grid;
 		gap: .3rem;

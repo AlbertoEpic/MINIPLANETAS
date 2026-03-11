@@ -384,8 +384,152 @@
 	},
 ];
 
+const planetProfiles = {
+	'planeta-alquezar': {
+		location: 'Alquézar, España',
+		coordinates: '42.1728, -0.0239',
+		atmosphere: ['Natural', 'Soleado', 'Sereno'],
+		discoveryDate: '2025-04-07',
+		equipment: 'Olympus OM-1 sobre trípode con cabezal panorámico Nodal Ninja 5',
+	},
+	'planeta-bejenado': {
+		location: 'La Palma, España',
+		coordinates: '28.6905, -17.8567',
+		atmosphere: ['Volcánico', 'Natural', 'Dramático'],
+		discoveryDate: '2022-08-29',
+		equipment: 'Panasonic Lumix DC-GX9',
+	},
+	'planeta-castillosaumur': {
+		location: 'Saumur, Francia',
+		coordinates: '47.2597, -0.0786',
+		atmosphere: ['Urbano', 'Histórico', 'Soleado'],
+		discoveryDate: '2021-08-26',
+		equipment: 'GoPro Hero 7 Black',
+	},
+	'planeta-dunedupilat': {
+		location: 'La Teste-de-Buch (Francia)',
+		coordinates: '44°35\'18.7"N 1°12\'45.3"W',
+		atmosphere: ['Natural'],
+		discoveryDate: '2021-08-24',
+		equipment: 'GoPro Hero 7 Black',
+	},
+	'planeta-castilloloarre': {
+		location: 'Loarre, España',
+		coordinates: '42.3247, -0.6247',
+		atmosphere: ['Natural', 'Histórico', 'Soleado'],
+		discoveryDate: '2026-02-18',
+		equipment: 'DJI Mini 5 Pro',
+	},
+	'planeta-anciles': {
+		location: 'Anciles',
+		coordinates: '42°35\'23.7"N 0°30\'34.3"E',
+		atmosphere: ['Natural'],
+		discoveryDate: '2026-03-08',
+		equipment: 'DJI Mini 5 Pro',
+	},
+	'planeta-eriste': {
+		location: 'Eriste',
+		coordinates: '42°35\'01.4"N 0°29\'10.0"E',
+		atmosphere: ['Natural'],
+		discoveryDate: '2025-10-19',
+		equipment: 'DJI Mini 5 Pro',
+	},
+	'planeta-porron-1': {
+		location: 'Tramacastilla de Tena',
+		coordinates: '42°44\'13.2"N 0°25\'48.5"W',
+		atmosphere: ['Natural'],
+		discoveryDate: '2025-07-10',
+		equipment: 'DJI mini 3 Pro',
+	},
+	'planeta-espelunciecha': {
+		location: 'Formigal',
+		coordinates: '42°46\'53.5"N 0°26\'14.9"W',
+		atmosphere: ['Natural'],
+		discoveryDate: '2025-12-13',
+		equipment: 'DJI Mini 5 Pro',
+	},
+	'planeta-fiordo-de-montearagon': {
+		location: 'Fornillos, Huesca',
+		coordinates: '42°11\'29.7"N 0°22\'12.7"W',
+		atmosphere: ['Natural'],
+		discoveryDate: '2025-10-28',
+		equipment: 'Cámara 360',
+	},
+	'planeta-houratatere': {
+		location: 'Laruns, Francia',
+		coordinates: '42°52\'58.8"N 0°27\'15.8"W',
+		atmosphere: ['Natural'],
+		discoveryDate: '2023-05-01',
+		equipment: 'DJI Mini 3 Pro',
+	},
+	'planeta-la-concha-san-sebastian': {
+		location: 'San Sebastián',
+		coordinates: '43°19\'13.3"N 2°00\'17.3"W',
+		atmosphere: ['Natural', 'Urbano'],
+		discoveryDate: '2026-01-01',
+		equipment: 'GoPro Hero 7 Black',
+	},
+	'planeta-peine-del-viento-san-sebastian': {
+		location: 'San Sebastián',
+		coordinates: '43°19\'13.3"N 2°00\'17.3"W',
+		atmosphere: ['Natural', 'Urbano'],
+		discoveryDate: '2026-01-01',
+		equipment: 'GoPro Hero 7 Black',
+	},
+	'planeta-lacristalliere': {
+		location: 'Urdos, Francia',
+		coordinates: '42°51\'16.3"N 0°34\'32.6"W',
+		atmosphere: ['Natural'],
+		discoveryDate: '2021-09-12',
+		equipment: 'DJI Mini 3 Pro',
+	},
+	'planeta-maladeta-oriental': {
+		location: 'Benasque',
+		coordinates: '42°38\'47.3"N 0°38\'25.9"E',
+		atmosphere: ['Natural'],
+		discoveryDate: '2022-04-30',
+		equipment: 'GoPro Hero 7 Black',
+	},
+	'planeta-penanevera': {
+		location: 'Villanúa',
+		coordinates: '42°42\'30.3"N 0°27\'03.6"W',
+		atmosphere: ['Natural'],
+		discoveryDate: '2025-09-27',
+		equipment: 'DJI Mini 5 Pro',
+	},
+	'planeta-vadiello': {
+		location: 'Vadiello, Huesca',
+		coordinates: '42.2900, -0.2000',
+		atmosphere: ['Natural'],
+		discoveryDate: '2021-01-24',
+		equipment: 'GoPro Hero 7 Black',
+	},
+	'planeta-comodoto': {
+		location: 'Pineta, España',
+		coordinates: '42.6763868,0.1150377',
+		atmosphere: ['Natural', 'Soleado'],
+		discoveryDate: '2025-11-02',
+		equipment: 'Olympus OM-1',
+	},
+};
+
+const defaultProfile = {
+	location: 'Calculando...',
+	coordinates: 'Necesario medición más precisa.',
+	atmosphere: ['Natural'],
+	discoveryDate: '2026-01-01',
+	equipment: 'DJI Mini 3 Pro',
+};
+
 export const planetData = basePlanetData.map((planet) => ({
 	...planet,
 	image360: planet.image360 ?? planet.image,
+	...(planetProfiles[planet.slug] ?? defaultProfile),
+	sheet: {
+		...(planetProfiles[planet.slug] ?? defaultProfile),
+		tone: planet.tone,
+		orbit: planet.orbit,
+		size: planet.size,
+	},
 }));
 
