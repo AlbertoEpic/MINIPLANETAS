@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import logoImage from '../assets/ui/logoMiniPlanetas.png';
 import { planetData } from '../data/planets';
 
 const planets = planetData;
@@ -34,7 +36,7 @@ const sizes = [...new Set(planets.map((planet) => planet.size))].sort((a, b) =>
 	<body>
 		<header class="top">
 			<a class="brand" href={toBasePath('')}>
-				<img src={toBasePath('logoMiniPlanetas.png')} alt="" class="brand-logo" aria-hidden="true" />
+				<Image src={logoImage} alt="" class="brand-logo" aria-hidden="true" loading="eager" />
 				<span class="brand-text">MINIPLANETAS</span>
 			</a>
 			<button class="menu-toggle" type="button" aria-label="Abrir menú" aria-controls="main-nav" aria-expanded="false">

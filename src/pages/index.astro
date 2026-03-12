@@ -1,4 +1,8 @@
 ---
+import { Image } from 'astro:assets';
+import logoImage from '../assets/ui/logoMiniPlanetas.png';
+import portraitImage from '../assets/ui/retrato.jpg';
+import editImage from '../assets/ui/edit.png';
 import { planetData } from '../data/planets';
 
 type Planet = {
@@ -29,8 +33,15 @@ const normalizedBase =
 const toBasePath = (path = '') => `${normalizedBase}/${path.replace(/^\/+/, '')}`;
 const toAssetPath = (path = '') =>
 	path.startsWith('/') ? `${normalizedBase}${path}` : `${normalizedBase}/${path}`;
-const editImageUrl = toAssetPath('edit.png?v=20260220-1');
-const portraitImageUrl = toAssetPath('retrato.jpg?v=20260220-1');
+const planetImages = import.meta.glob('../assets/planets/*.{jpg,jpeg,png,JPG,JPEG,PNG}', {
+	eager: true,
+	import: 'default',
+});
+
+const getOptimizedPlanetImage = (imagePath: string) => {
+	const imageFileName = imagePath.split('/').pop() ?? '';
+	return Object.entries(planetImages).find(([filePath]) => filePath.endsWith(`/${imageFileName}`))?.[1];
+};
 ---
 
 <html lang="es">
@@ -51,7 +62,7 @@ const portraitImageUrl = toAssetPath('retrato.jpg?v=20260220-1');
 	<body>
 		<header class="top">
 			<a class="brand" href={toBasePath('')}>
-				<img src={toBasePath('logoMiniPlanetas.png')} alt="" class="brand-logo" aria-hidden="true" />
+				<Image src={logoImage} alt="" class="brand-logo" aria-hidden="true" loading="eager" />
 				<span class="brand-text">MINIPLANETAS</span>
 			</a>
 			<button class="menu-toggle" type="button" aria-label="Abrir menú" aria-controls="main-nav" aria-expanded="false">
@@ -104,7 +115,11 @@ const portraitImageUrl = toAssetPath('retrato.jpg?v=20260220-1');
 				<div class="featured-grid">
 				{featuredPlanets.map((planet, index) => (
 					<a class="planet-card" href={toBasePath(`planetas/${planet.slug}`)} style={`--delay:${index * 120}ms`}>
-						<img src={toAssetPath(planet.image)} alt={`Mini planeta ${planet.name}`} loading="lazy" />
+						{getOptimizedPlanetImage(planet.image) ? (
+							<Image src={getOptimizedPlanetImage(planet.image)} alt={`Mini planeta ${planet.name}`} loading="lazy" />
+						) : (
+							<img src={toAssetPath(planet.image)} alt={`Mini planeta ${planet.name}`} loading="lazy" />
+						)}
 						<div class="planet-meta">
 							<h2>{planet.name}</h2>
 							<p>{planet.description}</p>
@@ -117,9 +132,9 @@ const portraitImageUrl = toAssetPath('retrato.jpg?v=20260220-1');
 
 			<section class="story" aria-label="Historia del proyecto">
 				<article class="story-card story-card--image-right">
-					<img
+					<Image
 						class="story-image"
-						src={portraitImageUrl}
+						src={portraitImage}
 						alt="Retrato del creador"
 						loading="lazy"
 					/>
@@ -134,9 +149,9 @@ const portraitImageUrl = toAssetPath('retrato.jpg?v=20260220-1');
 				</article>
 
 				<article class="story-card story-card--image-right">
-					<img
+					<Image
 						class="story-image"
-						src={editImageUrl}
+						src={editImage}
 						alt="Proceso de edición de un mini-planeta"
 						loading="lazy"
 					/>
@@ -470,6 +485,13 @@ const portraitImageUrl = toAssetPath('retrato.jpg?v=20260220-1');
 		filter: brightness(1.22) saturate(0.8) contrast(0.92);
 	}
 
+	:global(.story-image img) {
+		width: 100%;
+		height: auto;
+		border-radius: inherit;
+		object-fit: cover;
+	}
+
 	.story-card--image-right {
 		display: grid;
 		grid-template-columns: minmax(0, 1fr) 96px;
@@ -507,8 +529,17 @@ const portraitImageUrl = toAssetPath('retrato.jpg?v=20260220-1');
 		animation-delay: var(--delay);
 	}
 
-	.planet-card img {
+	.planet-card > img,
+	.planet-card :global(picture) {
 		width: 100%;
+		display: block;
+		line-height: 0;
+	}
+
+	.planet-card :global(picture > img),
+	.planet-card > img {
+		width: 100%;
+		height: auto;
 		display: block;
 		aspect-ratio: 1 / 1;
 		object-fit: cover;

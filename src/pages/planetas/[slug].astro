@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import { planetData } from '../../data/planets';
+import logoImage from '../../assets/ui/logoMiniPlanetas.png';
 
 type Planet = {
 	slug: string;
@@ -45,6 +47,14 @@ const toPublicAssetPath = (path = '') =>
 	typeof path === 'string' && normalizedBase && path.startsWith(`${normalizedBase}/`)
 		? path.slice(normalizedBase.length)
 		: path;
+const planetImages = import.meta.glob('../../assets/planets/*.{jpg,jpeg,png,JPG,JPEG,PNG}', {
+	eager: true,
+	import: 'default',
+});
+const planetImageFileName = planet.image.split('/').pop() ?? '';
+const optimizedPlanetImage = Object.entries(planetImages).find(([filePath]) =>
+	filePath.endsWith(`/${planetImageFileName}`)
+)?.[1];
 const discoveryDate = new Date(planet.sheet.discoveryDate).toLocaleDateString('es-ES', {
 	day: '2-digit',
 	month: 'long',
@@ -103,7 +113,7 @@ const shareDescription =
 	<body>
 		<header class="top">
 			<a class="brand" href={toBasePath('')}>
-				<img src={toBasePath('logoMiniPlanetas.png')} alt="" class="brand-logo" aria-hidden="true" />
+				<Image src={logoImage} alt="" class="brand-logo" aria-hidden="true" loading="eager" />
 				<span class="brand-text">MINIPLANETAS</span>
 			</a>
 			<button class="menu-toggle" type="button" aria-label="Abrir menú" aria-controls="main-nav" aria-expanded="false">
@@ -121,7 +131,11 @@ const shareDescription =
 
 		<main class="planet-view">
 			<section class="visual">
-				<img src={toAssetPath(planet.image)} alt={`Vista grande de ${planet.name}`} loading="eager" data-main-image data-share-src={shareImageUrl} />
+				{optimizedPlanetImage ? (
+					<Image src={optimizedPlanetImage} alt={`Vista grande de ${planet.name}`} loading="eager" data-main-image data-share-src={shareImageUrl} />
+				) : (
+					<img src={toAssetPath(planet.image)} alt={`Vista grande de ${planet.name}`} loading="eager" data-main-image data-share-src={shareImageUrl} />
+				)}
 			</section>
 
 			<section class="story">
@@ -203,7 +217,11 @@ const shareDescription =
 				<button class="viewer-control viewer-close" type="button" aria-label="Cerrar visor" title="Cerrar" data-close-viewer>x</button>
 			</div>
 			<div class="viewer-stage" data-viewer-stage>
-				<img src={toAssetPath(planet.image)} alt={`Imagen completa de ${planet.name}`} data-viewer-image draggable="false" />
+				{optimizedPlanetImage ? (
+					<Image src={optimizedPlanetImage} alt={`Imagen completa de ${planet.name}`} data-viewer-image draggable="false" />
+				) : (
+					<img src={toAssetPath(planet.image)} alt={`Imagen completa de ${planet.name}`} data-viewer-image draggable="false" />
+				)}
 			</div>
 		</div>
 
@@ -737,16 +755,25 @@ const shareDescription =
 	}
 
 	.visual {
+		display: grid;
+		place-items: center;
+		aspect-ratio: 1 / 1;
 		border-radius: 1rem;
 		overflow: hidden;
 		border: 1px solid var(--stroke);
 		background: rgba(18, 12, 32, .78);
 	}
-	.visual img {
+	.visual > img,
+	.visual :global(picture) {
 		width: 100%;
+		height: 100%;
 		display: block;
-		aspect-ratio: 1 / 1;
-		object-fit: cover;
+	}
+	.visual :global(picture > img),
+	.visual > img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
 		cursor: zoom-in;
 	}
 

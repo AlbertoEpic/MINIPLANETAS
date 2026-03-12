@@ -1,4 +1,6 @@
 ﻿---
+import { Image } from 'astro:assets';
+import logoImage from '../assets/ui/logoMiniPlanetas.png';
 import tripodeNodalImage from '../assets/como/tripodenodal.jpg';
 import dronImage from '../assets/como/dron.jpg';
 import myriAppImage from '../assets/como/myriApp.jpg';
@@ -29,7 +31,7 @@ const processPhotoPath = toBasePath('planets/Planeta_Fiordo-de-Montearagón.jpg'
 	<body>
 		<header class="top">
 			<a class="brand" href={toBasePath('')}>
-				<img src={toBasePath('logoMiniPlanetas.png')} alt="" class="brand-logo" aria-hidden="true" />
+				<Image src={logoImage} alt="" class="brand-logo" aria-hidden="true" loading="eager" />
 				<span class="brand-text">MINIPLANETAS</span>
 			</a>
 			<button class="menu-toggle" type="button" aria-label="Abrir menú" aria-controls="main-nav" aria-expanded="false">
