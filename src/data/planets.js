@@ -375,6 +375,16 @@
 		size: 'Variable',
 	},
 	{
+		slug: 'planeta-trollfjordvatnet',
+		name: 'Planeta Trollfjordvatnet',
+		image: '/planets/Planeta_Trollfjordvatnet.jpg',
+		description:
+			'Planeta de aguas profundas y entorno glaciar, situado en las Islas Lofoten, Noruega. Su superficie refleja la luz polar y está rodeada de montañas abruptas que emergen directamente del fiordo. La atmósfera es fría y cristalina, ideal para observadores de auroras y exploradores de paisajes extremos.',
+		tone: 'Azul polar',
+		orbit: 'Órbita en estudio',
+		size: 'Variable',
+	},
+	{
 		slug: 'planeta-valle-de-tena',
 		name: 'Planeta Valle de Tena',
 		image: '/planets/Planeta_Valle de Tena.jpg',
@@ -388,6 +398,13 @@
 ];
 
 const planetProfiles = {
+	'planeta-trollfjordvatnet': {
+		location: 'Islas Lofoten (Noruega)',
+		coordinates: "68°21'55.2\"N 14°51'48.3\"E",
+		atmosphere: ['Glaciar', 'Fiordo', 'Frío'],
+		discoveryDate: '2024-04-02',
+		equipment: 'DJI Mini 3 Pro',
+	},
 	'planeta-alquezar': {
 		location: 'Alquézar, España',
 		coordinates: '42.1728, -0.0239',
