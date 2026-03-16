@@ -1,15 +1,15 @@
 ﻿const basePlanetData = [
-	{
-		slug: 'planeta-alquezar',
-		name: 'Planeta Alquézar',
-		image: '/planets/Planeta_Alquézar.jpg',
-		image360: '/pano360/PANO_SanMiguel-Alquézar.jpg',
-		description:
-			'Planeta con claros indicios de albergar una desarrollada civilización. No está claro todavía si perdura o la vida se extinguió hace no muchos siglos. Lo que está claro que los habitantes de este pequeño asteriode dejaron su rastro en él, con construcciones de diversa índole.',
-		tone: 'Cobalto brillante',
-		orbit: 'Órbita 12',
-		size: 'Compacto',
-	},
+   {
+	   slug: 'planeta-alquezar',
+	   name: 'Planeta Alquézar',
+	   image: '/planets/Planeta_Alquézar.jpg',
+	   image360: '/pano360/PANO_SanMiguel-Alquézar.jpg',
+	   description:
+		   'Planeta con claros indicios de albergar una desarrollada civilización. No está claro todavía si perdura o la vida se extinguió hace no muchos siglos. Lo que está claro que los habitantes de este pequeño asteriode dejaron su rastro en él, con construcciones de diversa índole.',
+	nombreCientifico: '4LQUÉZ3R',
+	   orbit: 'Órbita 12',
+	   size: 'Compacto',
+   },
 	{
 		slug: 'planeta-anciles',
 		name: 'Planeta Anciles',
@@ -17,7 +17,7 @@
 		image360: '/pano360/PANO-DRONE_Anciles.jpg',
 		description:
 			'Este pequeño planeta se distingue por su carácter bucólico y señorial. Su superficie está dominada por una extensa pradera circular de tonos verdes y ocres, que sirve de núcleo a un asentamiento de arquitectura tradicional en piedra y pizarra. Las edificaciones, coronadas por chimeneas y torres puntiagudas, parecen brotar de la tierra con la misma naturalidad que los árboles que las rodean. La geología de este astro es amable; laderas suaves cubiertas de vegetación caducifolia que protegen el núcleo habitado del vacío circundante. La atmósfera es de una claridad cristalina, con nubes algodonosas que orbitan a baja altura, creando un juego de sombras sobre los muros de piedra centenarios. No se percibe el ruido de la tecnología moderna; es un planeta-jardín, un refugio donde el tiempo parece medirse por el ciclo de las estaciones y donde la herencia de los antiguos constructores se mantiene intacta bajo un cielo azul infinito.',
-		tone: 'Registro nuevo',
+		nombreCientifico: '4ZC1L3S',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -28,7 +28,7 @@
 		image360: '/pano360/PANO_Bejenado.jpg',
 		description:
 			'Relieve volcánico con energía ascendente, ideal para conceptos que requieren impulso.',
-		tone: 'Magenta iónico',
+		nombreCientifico: 'B3J3Z4D0',
 		orbit: 'Órbita 18',
 		size: 'Denso',
 	},
@@ -39,7 +39,7 @@
 		image360: '/pano360/PANO_Castillo-De-Saumur.jpg',
 		description:
 			'Arquitectura fluvial y elegancia de piedra para narrativas clásicas y claras.',
-		tone: 'Arena polar',
+		nombreCientifico: 'C4ST1LL0 S4UMUR',
 		orbit: 'Órbita 06',
 		size: 'Ligero',
 	},
@@ -50,7 +50,7 @@
 		image360: '/pano360/PANO-DRONE_CastilloLoarre.jpg',
 		description:
 			'Fortificación pétrea sobre relieve alto, ideal para conceptos sólidos y monumentales.',
-		tone: 'Registro nuevo',
+		nombreCientifico: 'C4ST1LL0 L04RR3',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -61,7 +61,7 @@
 		image360: '/pano360/PANO_Comodoto.jpg',	
 		description:
 			'Textura tropical y ritmo cálido, pensado para proyectos de alto contraste.',
-		tone: 'Verde aurora',
+		nombreCientifico: 'C0M0D0T0',
 		orbit: 'Órbita 23',
 		size: 'Dual',
 	},
@@ -72,7 +72,7 @@
 		image360: '/pano360/PANO_DunaPilat.jpg',
 		description:
 			'Dunas doradas y horizonte abierto; perfecto para propuestas expansivas.',
-		tone: 'Oro sedimentado',
+		nombreCientifico: 'DUZ3 DU P1L4T',
 		orbit: 'Órbita 29',
 		size: 'Extenso',
 	},
@@ -83,7 +83,7 @@
 		image360: '/pano360/PANO-DRONE_Eriste.jpg',
 		description:
 			'Aire frío y claridad alpina para sistemas precisos y calmados.',
-		tone: 'Azul glaciar',
+		nombreCientifico: '3R1ST3',
 		orbit: 'Órbita 31',
 		size: 'Sereno',
 	},
@@ -94,7 +94,7 @@
 		image360: '/pano360/PANO_Porrón.jpg',
 		description:
 			'Este pequeño planeta está dominado por una protuberancia granítica de una verticalidad extrema. Su superficie no busca la horizontalidad; es una sucesión de aristas y placas de roca desnuda que convergen en una cima estrecha, como un colmillo mineral que perfora la atmósfera superior. La geología aquí es severa y monocromática, con predominio de grises profundos y texturas rugosas que delatan siglos de erosión por vientos de alta montaña. No hay rastro de hidrosfera superficial, aunque las manchas de nieve perpetua en las grietas de su cara oculta sugieren una reserva de humedad congelada. La vida es inexistente en este monolito espacial, un mundo que parece haber sido despojado de todo lo superfluo para quedar reducido a su esqueleto de piedra más resistente.',
-		tone: 'Registro nuevo',
+		nombreCientifico: 'P0RRÓZ 1',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -105,7 +105,7 @@
 		image360: '/pano360/PANO-DRONE_Espelunciecha.jpg',
 		description:
 			'Profundidades calcáreas y ecos suaves; un planeta para ideas introspectivas.',
-		tone: 'Registro nuevo',
+		nombreCientifico: 'ESP3LUZC13CH4',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -115,7 +115,7 @@
 		image: '/planets/Planeta_Fiordo-de-Montearagón.jpg',
 		description:
 			'Cauce profundo y reflejos oscuros, perfecto para proyectos con misterio.',
-		tone: 'Registro nuevo',
+		nombreCientifico: 'F1 0RD0 D3 M0ZT3 4R4GÓZ',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -125,7 +125,7 @@
 		image: '/planets/Planeta_Gracionepel.jpg',
 		description:
 			'Relieve sereno y vegetación tenue, equilibrado para identidades suaves.',
-		tone: 'Registro nuevo',
+		nombreCientifico: 'GR4C1 0Z3P3L',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -136,7 +136,7 @@
 		Image360: '/pano360/PANO_Houratatere.jpg',
 		description:
 			'Tonos cálidos y respiración lenta, pensado para experiencias contemplativas.',
-		tone: 'Registro nuevo',
+		nombreCientifico: 'H 0UR4T4T3R3',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -146,7 +146,7 @@
 		image: '/planets/Planeta_La-Concha---San-Sebastián.jpg',
 		description:
 			'Este pequeño planeta presenta una hidrografía semicircular perfecta, definida por una bahía de aguas serenas que ocupa el centro de su hemisferio visible. La geología costera ha sido domesticada por una avanzada red urbana que bordea el litoral con una elegancia arquitectónica notable, destacando una barandilla blanca que actúa como frontera entre el orden ciudadano y la naturaleza marina. En el centro de la masa líquida emerge una isla-fortaleza, un pequeño núcleo de roca y vegetación que sirve como eje visual de la cuenca. El terreno se eleva abruptamente en los extremos, formando promontorios boscosos que protegen la bahía de los vientos espaciales. La atmósfera es luminosa y parece cargada de salinidad, sugiriendo un clima templado donde la civilización ha prosperado gracias a un diseño urbano que abraza el mar en lugar de luchar contra él.',
-		tone: 'Registro nuevo',
+		nombreCientifico: 'L4 C0ZCH4, S4Z S3B4ST1ÁZ',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -157,7 +157,7 @@
 		image360: '/pano360/PANO_LaCristallière.jpg',
 		description:
 			'Este planetoide es una oda a la geología del frío. Su superficie está compuesta por una sucesión de aristas de granito oscuro que contrastan violentamente con extensos mantos de nieve virgen. La luz estelar incide sobre las laderas con una intensidad tal que la nieve adquiere un brillo mineral, casi vítreo, justificando el nombre de este sector galáctico. No existen rastros de asentamientos biológicos; la atmósfera parece ser demasiado rala para sostener vida compleja, dejando el protagonismo a una orografía de crestas afiladas y circos glaciares en formación. Es un mundo que parece suspendido en un estado de congelación eterna, donde el único cambio visible es el avance lento de las sombras sobre sus abismos de roca desnuda. La pureza de su composición sugiere un origen en las regiones más gélidas de la nebulosa original.',
-		tone: 'Registro nuevo',
+		nombreCientifico: 'L4 CR1ST4LL13R3',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -168,7 +168,7 @@
 		image360: '/pano360/PANO_Maladeta-Oriental.jpg',
 		description:
 			'Este pequeño planeta es una exhibición de fuerza geológica pura. Su superficie está dominada por una inmensa mole de granito que se eleva hacia el cenit, formando una pirámide natural de aristas vivas y paredes de una verticalidad desafiante. Se trata de un mundo de orogenia masiva, donde la corteza parece haber sido empujada por presiones internas colosales hasta romper la atmósfera rala. La nieve se aferra únicamente a las fisuras y pequeños nichos de su cara norte, mientras que el resto del astro muestra una textura mineral desnuda, pulida por milenios de vientos estelares. No hay rastros de actividad orgánica ni artificial; es un monolito planetario que sirve como punto de referencia en la navegación de este sector. La luz se quiebra en sus mil facetas pétreas, otorgándole un brillo plateado que lo hace visible desde grandes distancias, como un faro silencioso de roca y hielo.',
-		tone: 'Registro nuevo',
+		nombreCientifico: 'M4L4D3T4 0R13ZT4L',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -178,7 +178,7 @@
 		image: '/planets/Planeta_Peine-del-Viento---San-Sebastián.jpg',
 		description:
 			'Este pequeño cuerpo celeste es un testimonio de la resistencia frente al caos. Su superficie está compuesta por estratos de roca sedimentaria que emergen del océano en ángulos imposibles, formando un espigón natural que desafía el embate constante de una hidrosfera brava. Lo más fascinante de este astro es la presencia de estructuras ferrosas ancladas directamente en la piedra viva. Estos artefactos, de apariencia orgánica pero origen artificial, parecen haber sido diseñados para \'peinar\' las corrientes de aire y agua, extrayendo una energía invisible o quizás actuando como receptores de señales cósmicas. La civilización que habitó este lugar no construyó refugios, sino que dejó su huella en forma de esculturas tectónicas que vibran con cada golpe de mar. Es un planeta de una belleza severa, donde el sonido del viento silbando entre el metal y el rugido del agua forman la única banda sonora de su existencia.',
-		tone: 'Registro nuevo',
+		nombreCientifico: 'P31Z3 D3L V13ZT0, S4Z S3B4ST1ÁZ',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -188,7 +188,7 @@
 		image: '/planets/Planeta_Peña-Medio.jpg',
 		description:
 			'Este pequeño cuerpo celeste es un ejemplo de aislamiento geológico extremo. Su superficie está dominada por una imponente formación caliza que se proyecta verticalmente, actuando como un pilar natural que atraviesa la densa capa de nubes del hemisferio inferior. La geología de este astro es rugosa y fracturada, con una cresta somital que ofrece una visión panorámica del vacío circundante. La vegetación es mínima, reducida a líquenes y pequeñas plantas de roca que sobreviven a la exposición constante de la radiación estelar y los vientos de altura. No se detectan huellas de civilización permanente, lo que sugiere que es un punto de observación soberbio o un refugio natural para especies migratorias que buscan las cumbres más puras del sistema. La atmósfera superior es extremadamente límpida, lo que permite que la roca brille con un tono gris plateado bajo la luz directa de su estrella.',
-		tone: 'Registro nuevo',
+		nombreCientifico: 'P3Ñ4 M3D1 0',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -199,7 +199,7 @@
 		image360: '/pano360/PANO-DRONE_PeñaNevera.jpg',
 		description:
 			'Este planetoide se distingue por una fisionomía sedimentaria muy marcada. Su superficie no es una masa uniforme, sino un complejo sistema de terrazas y escarpes donde los tonos ocres y rojizos de la tierra se entrelazan con el gris ceniza de la roca madre. La característica más notable de este mundo es su dualidad biológica: mientras que una vertiente aparece castigada por la erosión y el sol, mostrando una desnudez mineral casi absoluta, la otra cara alberga pequeñas cuencas de vegetación persistente que aprovechan la sombra de los grandes bloques erráticos. No se detectan estructuras artificiales, pero la disposición de sus crestas sugiere un mundo en constante reajuste tectónico, donde el hielo estacional (que da nombre al sector) actúa como el principal arquitecto, fracturando la piedra y creando refugios naturales en sus fisuras más profundas.',
-		tone: 'Registro nuevo',
+		nombreCientifico: 'P3Ñ4 Z3V3R4',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -210,7 +210,7 @@
 		image360: '/pano360/PANO_Piedra-Cobertera.jpg',
 		description:
 			'Este planetoide es un desafío a las leyes de la estática. Su característica más fascinante es una gigantesca losa de roca que descansa en un equilibrio casi imposible sobre un pedestal natural, como si una mano gigante la hubiera colocado allí para proteger el núcleo del astro. La geología de este mundo es de una austeridad absoluta: una extensión de roca caliza grisácea, fracturada por el tiempo y la erosión, donde apenas unas briznas de vegetación amarillenta logran sobrevivir. No hay señales de hidrosfera ni de atmósfera densa; es un entorno de pureza mineral donde el silencio espacial se siente pesado. La estructura que da nombre al planeta actúa como un refugio natural contra la radiación estelar, creando una zona de sombra perpetua que es el único rincón habitable de esta solitaria roca errante.',
-		tone: 'Registro nuevo',
+		nombreCientifico: 'P13DR4 C0B3RT3R4',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -221,7 +221,7 @@
 		image360: '/pano360/PANO-DRONE_Pineta.jpg',
 		description:
 			'Este planetoide destaca por una geometría en forma de \'U\' perfecta, una cicatriz glacial de proporciones épicas que divide el astro en dos hemisferios de roca vertical. La observación a 120 metros de altura permite apreciar un fondo de valle tapizado por un manto de praderas alpinas y bosques de coníferas que parecen diminutos musgos frente a las paredes de caliza que los custodian. La geología aquí es una exhibición de estratificación masiva. Las nubes se quedan atrapadas en la cuenca inferior, creando un mar de vapor que choca contra el circo de cumbres nevadas del fondo. No se detectan núcleos urbanos, solo una estrecha arteria de tránsito que serpentea por el fondo del valle, sugiriendo que este mundo es un santuario natural protegido por su propia magnitud. La atmósfera es densa y rica en oxígeno en las zonas bajas, mientras que en las crestas superiores el aire se vuelve tan fino y frío que solo el granito puro puede resistir la exposición al vacío.',
-		tone: 'Registro nuevo',
+		nombreCientifico: 'P1T3T4 12 0 M',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -232,7 +232,7 @@
 		image360: '/pano360/PANO-DRONE_Pineta.jpg',
 		description:
 			'A esta altitud, el planetoide revela su verdadera naturaleza como un anfiteatro colosal de roca. La perspectiva de 500 metros permite apreciar la curvatura perfecta del valle, donde las paredes de caliza grisácea se elevan como murallas infranqueables que protegen un núcleo de biodiversidad confinada. La geología en este nivel muestra una estratificación horizontal casi perfecta, con franjas de sedimentos que narran eras de compresión tectónica. En el fondo del abismo, el curso de un río de deshielo aparece como una fina vena de plata que serpentea entre densos bosques de hayas y abetos, los cuales, desde esta distancia, parecen una alfombra de musgo esmeralda. La atmósfera superior es gélida y volátil, con jirones de nubes que se aferran a las crestas como si intentaran no caer al vacío del valle. No hay rastro de tecnología, solo la majestuosidad del relieve en su estado más puro y sobrecogedor.',
-		tone: 'Registro nuevo',
+		nombreCientifico: 'P1T3T4 5 00 M',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -243,7 +243,7 @@
 		image360: '/pano360/PANO_Porrón.jpg',
 		description:
 			'Este pequeño planeta está dominado por una protuberancia granítica de una verticalidad extrema. Su superficie no busca la horizontalidad; es una sucesión de aristas y placas de roca desnuda que convergen en una cima estrecha, como un colmillo mineral que perfora la atmósfera superior. La geología aquí es severa y monocromática, con predominio de grises profundos y texturas rugosas que delatan siglos de erosión por vientos de alta montaña. No hay rastro de hidrosfera superficial, aunque las manchas de nieve perpetua en las grietas de su cara oculta sugieren una reserva de humedad congelada. La vida es inexistente en este monolito espacial, un mundo que parece haber sido despojado de todo lo superfluo para quedar reducido a su esqueleto de piedra más resistente.',
-		tone: 'Registro nuevo',
+		nombreCientifico: 'P0RRÓZ 11',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -254,7 +254,7 @@
 		image360: '/pano360/PANO-DRONE_PuntaCochaldo.jpg',
 		description:
 			'Este pequeño planeta destaca por su geometría piramidal, una formación de roca caliza que se proyecta hacia el espacio con una precisión casi arquitectónica. Su superficie está dominada por una cresta vertebral que divide el astro en dos vertientes de inclinación vertiginosa. La geología aquí es de una textura fragmentada y grisácea, con canchales de piedra suelta que se deslizan por las laderas como ríos minerales detenidos en el tiempo. La atmósfera es extremadamente tenue, permitiendo que la luz estelar perfile cada arista y cada fisura de la piedra con una claridad quirúrgica. No se detectan formas de vida ni hidrosfera líquida, solo pequeños depósitos de nieve cristalizada en las umbrías, lo que refuerza su imagen de atalaya solitaria y eterna en los confines del sistema.',
-		tone: 'Registro nuevo',
+		nombreCientifico: 'PUTZ4 C0CH4LD0',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -265,7 +265,7 @@
 		image360: '/pano360/PANO_PuntadelaCuta.jpg',
 		description:
 			'Este pequeño planeta se caracteriza por su geografía de contraste radical. Mientras que su superficie superior presenta una loma de vegetación resistente y pastos alpinos, su perímetro se rompe abruptamente en precipicios de una verticalidad absoluta. Es un mundo de \'borde\', donde la estabilidad de la meseta superior se encuentra cara a cara con el abismo. La geología aquí revela una estratificación sedimentaria muy clara en las paredes del acantilado, mostrando la historia geológica del astro en capas de roca caliza. La atmósfera en este punto es vibrante; desde su cumbre se pueden observar las corrientes de nubes fluyendo por los valles inferiores como ríos de vapor. No se detectan asentamientos, lo que sugiere que este planeta es utilizado principalmente como un punto de vigilancia estratégica o un nodo de observación meteorológica debido a su posición dominante sobre el resto de los cuerpos celestes circundantes.',
-		tone: 'Registro nuevo',
+		nombreCientifico: 'PUTZ4 D3 L4 CUT4',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -276,7 +276,7 @@
 		image360: '/pano360/PANO_PuntArbenuso.jpg',
 		description:
 			'Este pequeño planeta se distingue por una geografía de aristas suaves pero persistentes. Su superficie está cubierta por un manto de nieve que suaviza los contornos de la roca madre, creando una textura visual que recuerda al terciopelo blanco sobre un núcleo de granito oscuro. La geología aquí es de transición: amplias laderas de nieve acumulada que desembocan en espolones rocosos donde el viento estelar ha barrido cualquier rastro de humedad. La atmósfera es gélida y extremadamente pura, permitiendo una visibilidad perfecta de las cordilleras vecinas que orbitan en el mismo sector. No se detectan huellas de actividad biológica, solo la soledad majestuosa de una cumbre que parece diseñada para observar el tránsito de los cometas. Es un mundo de silencio absoluto, donde la luz se refleja con tal intensidad en las laderas nevadas que el planeta brilla con luz propia en la oscuridad del vacío.',
-		tone: 'Registro nuevo',
+		nombreCientifico: 'PUTZ4 4RB3ZUS0',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -287,7 +287,7 @@
 		image360: '/pano360/PANO-DRONE_Riglos.jpg',
 		description:
 			'Este pequeño planeta es una exhibición de monolitos sedimentarios sin parangón. Su superficie está dominada por gigantescas torres de conglomerado rojizo, cuyas paredes caen en vertical formando cilindros de roca que parecen sostener el firmamento. La textura de estas formaciones es rugosa, compuesta por guijarros cementados durante eones de presión planetaria. La vida en este astro se concentra en la base de estas murallas naturales, donde un pequeño asentamiento de casas blancas se agrupa buscando la protección de los gigantes de piedra. La atmósfera es cálida y luminosa, lo que resalta el color bermellón de la roca frente al azul profundo del espacio circundante. Es un mundo de una verticalidad absoluta, donde la civilización local ha aprendido a vivir a la sombra de estas estructuras colosales que parecen dedos brotando del núcleo mismo del planeta.',
-		tone: 'Registro nuevo',
+		nombreCientifico: 'R1GL0S',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -297,7 +297,7 @@
 		image: '/planets/Planeta_Tierz_niebla.jpg',
 		description:
 			'Este pequeño planeta presenta un fenómeno meteorológico permanente de inversión térmica extrema. Su superficie no es visible en su totalidad; en su lugar, emerge un conjunto de lomas y relieves suaves de tierras arcillosas que actúan como islas en un mar de nubes densas y blancas. La geología aquí es de formas redondeadas y erosión suave, con tonos ocres y marrones que delatan una composición de sedimentos fértiles. La atmósfera inferior es un manto impenetrable de niebla que oculta los valles, mientras que la atmósfera superior es de una claridad absoluta, permitiendo que la luz estelar bañe las cimas con una calidez dorada. No se detectan grandes infraestructuras, salvo pequeños senderos que recorren las crestas, sugiriendo un mundo de tránsito silencioso donde la civilización vive por encima de las nubes, en un estado de aislamiento contemplativo y paz profunda.',
-		tone: 'Registro nuevo',
+		nombreCientifico: 'T13RZ Z13B4',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -307,7 +307,7 @@
 		image: '/planets/Planeta_Tierz_nieve.jpg',
 		description:
 			'En este estado orbital, el planetoide ha sido cubierto por una capa de nieve inmaculada que unifica su relieve. La geografía de suaves lomas arcillosas que veíamos anteriormente ha quedado suavizada bajo un manto blanco, convirtiendo el terreno en una sucesión de ondas níveas que reflejan la luz estelar con una pureza cegadora. La geología de este mundo se intuye a través de las crestas y las pequeñas depresiones donde la nieve no ha logrado ocultar del todo los tonos ocres de la tierra. La atmósfera, a diferencia del sector de niebla, es aquí de una transparencia absoluta, permitiendo ver el horizonte infinito donde la curvatura del planeta se funde con el azul profundo del espacio. No hay rastro de vida activa ni de estructuras artificiales visibles; es un mundo de silencio mineral y frío estático, donde el tiempo parece haberse detenido bajo el peso del invierno planetario.',
-		tone: 'Registro nuevo',
+		nombreCientifico: 'T13RZ Z13V3',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -317,7 +317,7 @@
 		image: '/planets/Planeta_Toronzue.jpg',
 		description:
 			'Este pequeño planeta destaca por su geografía cóncava y majestuosa. Su superficie está dominada por una inmensa cuenca natural, un circo glaciar cuyas paredes de roca caliza y esquisto se elevan formando un anillo protector de cumbres afiladas. La geología aquí es una lección de erosión y resistencia. Mientras que las zonas altas muestran el esqueleto desnudo del astro en tonos grises y ocres, las laderas medias están tapizadas por un manto de vegetación alpina que desciende hacia el fondo del valle. La atmósfera es extremadamente limpia, lo que permite observar cómo la luz del sistema recorta cada espolón y cada canal de nieve persistente. No se detectan centros urbanos, lo que sugiere que es un santuario de biodiversidad de altura, un mundo donde el silencio solo se rompe por el movimiento de las masas de aire que fluyen entre sus picos.',
-		tone: 'Registro nuevo',
+		nombreCientifico: 'T0R0ZZU3',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -327,7 +327,7 @@
 		image: '/planets/Planeta_TorrazaEscuer.jpg',
 		description:
 			'Este pequeño planeta se caracteriza por una geografía de lomas suaves y vegetación densa, pero su rasgo más distintivo es una estructura megalítica cuadrangular que corona su punto más alto. Esta torre de piedra, de origen antiguo, parece ser el eje gravitatorio de toda la civilización que una vez habitó este sector. La geología aquí es de tonos cálidos y texturas orgánicas; los bosques de pinos y arbustos cubren gran parte del hemisferio visible, rodeando la base de la fortaleza natural sobre la que se asienta la torre. La atmósfera es límpida y serena, permitiendo que la construcción destaque como un faro de piedra contra el horizonte. No se percibe actividad tecnológica actual, lo que sugiere que este astro es un mundo-monumento, un testimonio de la arquitectura defensiva que ha resistido el paso de los eones, manteniendo su orgullo mineral frente a la inmensidad del espacio.',
-		tone: 'Registro nuevo',
+		nombreCientifico: 'T0RR4Z4 3SCU3R',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -338,7 +338,7 @@
 		image360: '/pano360/PANO_TournelonBlanc.jpg',
 		description:
 			'Este pequeño planeta es una exhibición de glaciología masiva. Su superficie está casi totalmente cubierta por un manto de nieve y hielo de un blanco cegador, que se adapta a las formas redondeadas de su núcleo rocoso. Es un mundo de geometría suave y orgánica, donde las aristas de piedra apenas logran asomar entre las capas acumuladas de precipitación sólida. La característica más fascinante de este astro es su luminosidad extrema. La luz estelar se refleja en el hielo con tal intensidad que el planeta parece emitir su propio brillo interno, justificando el nombre de este sector. No se detectan rastros de hidrosfera líquida ni de actividad biológica; es un desierto de cristal en estado de quietud absoluta. La atmósfera es extremadamente fina y fría, lo que mantiene las estructuras de hielo intactas frente a la erosión, convirtiendo a este mundo en una cápsula del tiempo criogénica que preserva la historia climática de la nebulosa.',
-		tone: 'Registro nuevo',
+		nombreCientifico: 'T0URZ3L0Z BL4ZC',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -348,7 +348,7 @@
 		image: '/planets/Planeta_Tozal-de-Las-Comas-Bike.jpg',
 		description:
 			'Este pequeño planeta se presenta como un baluarte de tierra y matorral, donde la orografía se suaviza en una loma que sirve de mirador hacia los sectores más profundos del sistema. Su superficie está dominada por una vegetación xerófila y resistente, adaptada a la exposición solar constante y a la escasez de hidrosfera superficial. La característica más relevante de este mundo es su función como nodo de observación. En su punto más alto, tenemos una prueba inequívoca de vida inteligente ¿?, un ser a bordo de lo que hemos llamado \'máquina de hacer felicidad\'. Desde esta posición, se tiene una vista privilegiada de las megaturbulencias atmosféricas (nubes) que fluyen por los valles inferiores, creando un mar blanco que choca contra las costas minerales de los planetas vecinos. Es un mundo de soledad estratégica, un punto de calma donde la atmósfera es tan pura que permite observar el tránsito de otros cuerpos celestes con una nitidez absoluta.',
-		tone: 'Registro nuevo',
+		nombreCientifico: 'T0Z4L D3 L4S C0M4S B1K3',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -359,7 +359,7 @@
 		image360: '/pano360/PANO_TozalDeLasComas.jpg',
 		description:
 			'Este pequeño planeta destaca por una orografía ondulada y fluida, diseñada casi por ingeniería natural para el tránsito rápido. Su superficie no es de roca agresiva, sino de una tierra compacta y cobriza que serpentea entre formaciones de vegetación baja y arbustiva. La característica más fascinante es la presencia de una infraestructura lineal orgánica: un sendero perfectamente definido que recorre la cresta del astro como una columna vertebral. La atmósfera es cálida y está cargada de partículas de polvo en suspensión, lo que sugiere una actividad cinemática constante. No se detectan grandes ciudades, solo la presencia de exploradores solitarios que utilizan la gravedad moderada de este mundo para alcanzar velocidades de descenso vertiginosas. Es un planeta-pista, un santuario para los amantes del movimiento que buscan el equilibrio perfecto entre la inercia y el relieve mineral.',
-		tone: 'Registro nuevo',
+		nombreCientifico: 'T0Z4L D3 L4S C0M4S',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -370,7 +370,7 @@
 		image360: '/pano360/PANO_Vadiello.jpg',
 		description:
 			'Este pequeño planeta destaca por una configuración hidrológica espectacular. Su núcleo está dominado por una inmensa masa de agua de un azul turquesa profundo, contenida por una barrera artificial de ingeniería masiva que regula el flujo del sistema. La geología de este astro es de una agresividad vertical fascinante. Está rodeado por mallo de conglomerado rojizo, gigantescas torres de piedra que se elevan como colmillos hacia el espacio. Estas formaciones muestran una erosión alveolar característica, con oquedades y nichos donde se refugian las especies aladas del sector. La atmósfera es fresca y húmeda en las capas bajas, cargada con el aroma de los pinos y el romero que tapizan las laderas menos expuestas. No se detectan grandes núcleos urbanos, lo que sugiere que este mundo es un punto de gestión de recursos hídricos vital para el sistema, un oasis de frescura donde el silencio solo es interrumpido por el eco del viento entre las canales de roca.',
-		tone: 'Registro nuevo',
+		nombreCientifico: 'V4D13LL0',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -381,7 +381,7 @@
 		image360: '/pano360/PANO_Trollfjordvatnet.jpg',
 		description:
 			'Planeta de aguas profundas y entorno glaciar, situado en las Islas Lofoten, Noruega. Su superficie refleja la luz polar y está rodeada de montañas abruptas que emergen directamente del fiordo. La atmósfera es fría y cristalina, ideal para observadores de auroras y exploradores de paisajes extremos.',
-		tone: 'Azul polar',
+		nombreCientifico: 'TROLLFJ1 0RDV4TZ3T',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -392,7 +392,7 @@
 		image360: '/pano360/PANO-DRONE_Valle-de-Tena_Cucuraza.jpg',
 		description:
 			'Este pequeño planeta destaca por ser un centro neurálgico de actividad. Su superficie no es solo roca y nieve, sino un tapiz de infraestructuras que se adaptan a una orografía de valles profundos y cumbres afiladas. Es un mundo donde la ingeniería civil ha aprendido a convivir con la escala alpina. La geología aquí es de una diversidad cromática asombrosa: desde los grises de las paredes calizas hasta el verde intenso de los bosques que rodean el gran núcleo hídrico central. La característica más notable es la presencia de un asentamiento urbano consolidado en la base del valle, cuyas luces y tejados se agrupan buscando la protección de las montañas. La atmósfera es dinámica, con nubes que se desplazan rápidamente entre los picos, sugiriendo un sistema climático muy activo. Es un planeta-refugio, un nodo de servicios y descanso para los viajeros espaciales que cruzan el sistema pirenaico.',
-		tone: 'Registro nuevo',
+		nombreCientifico: 'V4LL3 D3 T3Z4',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -403,7 +403,7 @@
 		image360: '/pano360/PANO_Catedral-Huesca.jpg',
 		description:
 			'En el corazón de la galaxia, entre nebulosas doradas y corrientes de energía ancestral, surge el Planeta Catedral de Huesca. Su núcleo urbano vibra con la presencia de una civilización recién descubierta, cuyos habitantes han erigido una catedral monumental que se alza como faro intergaláctico. Las plazas abiertas son portales de encuentro entre viajeros estelares y sabios locales, y la piedra dorada de sus muros resplandece bajo la luz de dos soles. En cada rincón, la arquitectura histórica revela inscripciones y símbolos de una cultura que ha aprendido a canalizar la energía cósmica, abriendo puertas a dimensiones desconocidas. La atmósfera es serena y luminosa, pero en el aire flota el misterio de un legado milenario: la catedral es el epicentro de rituales que conectan el planeta con el resto del universo, invitando a exploradores y soñadores a descifrar los secretos de una civilización que acaba de despertar al contacto galáctico.',
-		tone: 'Piedra dorada',
+		nombreCientifico: 'C4T3DR4L D3 HU3SC4',
 		orbit: 'Órbita en estudio',
 		size: 'Variable',
 	},
@@ -678,7 +678,7 @@ export const planetData = basePlanetData.map((planet) => ({
 	...(planetProfiles[planet.slug] ?? defaultProfile),
 	sheet: {
 		...(planetProfiles[planet.slug] ?? defaultProfile),
-		tone: planet.tone,
+		nombreCientifico: planet.nombreCientifico,
 		orbit: planet.orbit,
 		size: planet.size,
 	},

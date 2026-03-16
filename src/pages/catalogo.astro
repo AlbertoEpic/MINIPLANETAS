@@ -10,7 +10,7 @@ const normalizedBase =
 const toBasePath = (path = '') => `${normalizedBase}/${path.replace(/^\/+/, '')}`;
 const toAssetPath = (path = '') =>
 	path.startsWith('/') ? `${normalizedBase}${path}` : `${normalizedBase}/${path}`;
-const tones = [...new Set(planets.map((planet) => planet.tone))].sort((a, b) =>
+const nombresCientificos = [...new Set(planets.map((planet) => planet.nombreCientifico))].sort((a, b) =>
 	a.localeCompare(b, 'es', { sensitivity: 'base' })
 );
 const sizes = [...new Set(planets.map((planet) => planet.size))].sort((a, b) =>
@@ -63,13 +63,13 @@ const sizes = [...new Set(planets.map((planet) => planet.size))].sort((a, b) =>
 					<span>Texto</span>
 					<input id="filter-text" type="search" placeholder="Nombre o descripción" />
 				</label>
-				<label>
-					<span>Tono</span>
-					<select id="filter-tone">
-						<option value="">Todos</option>
-						{tones.map((tone) => <option value={tone}>{tone}</option>)}
-					</select>
-				</label>
+				   <label>
+					   <span>Nombre científico</span>
+					   <select id="filter-nombre-cientifico">
+						   <option value="">Todos</option>
+						   {nombresCientificos.map((nombreCientifico) => <option value={nombreCientifico}>{nombreCientifico}</option>)}
+					   </select>
+				   </label>
 				<label>
 					<span>Escala</span>
 					<select id="filter-size">
@@ -87,7 +87,7 @@ const sizes = [...new Set(planets.map((planet) => planet.size))].sort((a, b) =>
 						class="card"
 						data-name={planet.name.toLowerCase()}
 						data-description={planet.description.toLowerCase()}
-						data-tone={planet.tone}
+						   data-nombre-cientifico={planet.nombreCientifico}
 						data-size={planet.size}
 						data-href={detailPath}
 						tabindex="0"
@@ -100,7 +100,7 @@ const sizes = [...new Set(planets.map((planet) => planet.size))].sort((a, b) =>
 							<h2>{planet.name}</h2>
 							<p>{planet.description}</p>
 							<div class="meta">
-								<span>{planet.tone}</span>
+								   <span>{planet.nombreCientifico}</span>
 								<span>{planet.orbit}</span>
 								<span>{planet.size}</span>
 							</div>
@@ -148,31 +148,31 @@ const sizes = [...new Set(planets.map((planet) => planet.size))].sort((a, b) =>
 			}
 
 			const textInput = document.querySelector('#filter-text');
-			const toneSelect = document.querySelector('#filter-tone');
+			   const nombreCientificoSelect = document.querySelector('#filter-nombre-cientifico');
 			const sizeSelect = document.querySelector('#filter-size');
 			const catalogGrid = document.querySelector('#catalog-grid');
 			const cards = Array.from(document.querySelectorAll('#catalog-grid .card'));
 			const interactiveSelector = 'a, button, input, select, textarea';
 
-			const runFilters = () => {
-				const text = textInput?.value.toLowerCase().trim() || '';
-				const tone = toneSelect?.value || '';
-				const size = sizeSelect?.value || '';
-				const hasActiveFilters = Boolean(text || tone || size);
-				catalogGrid?.classList.toggle('is-filtered', hasActiveFilters);
+			   const runFilters = () => {
+				   const text = textInput?.value.toLowerCase().trim() || '';
+				   const nombreCientifico = nombreCientificoSelect?.value || '';
+				   const size = sizeSelect?.value || '';
+				   const hasActiveFilters = Boolean(text || nombreCientifico || size);
+				   catalogGrid?.classList.toggle('is-filtered', hasActiveFilters);
 
-				cards.forEach((card) => {
-					const name = card.dataset.name || '';
-					const description = card.dataset.description || '';
-					const matchesText = !text || name.includes(text) || description.includes(text);
-					const matchesTone = !tone || card.dataset.tone === tone;
-					const matchesSize = !size || card.dataset.size === size;
-					card.style.display = matchesText && matchesTone && matchesSize ? '' : 'none';
-				});
-			};
+				   cards.forEach((card) => {
+					   const name = card.dataset.name || '';
+					   const description = card.dataset.description || '';
+					   const matchesText = !text || name.includes(text) || description.includes(text);
+					   const matchesNombreCientifico = !nombreCientifico || card.dataset.nombreCientifico === nombreCientifico;
+					   const matchesSize = !size || card.dataset.size === size;
+					   card.style.display = matchesText && matchesNombreCientifico && matchesSize ? '' : 'none';
+				   });
+			   };
 
 			textInput?.addEventListener('input', runFilters);
-			toneSelect?.addEventListener('change', runFilters);
+			   nombreCientificoSelect?.addEventListener('change', runFilters);
 			sizeSelect?.addEventListener('change', runFilters);
 
 			cards.forEach((card) => {
