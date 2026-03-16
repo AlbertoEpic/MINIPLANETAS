@@ -28,11 +28,9 @@ const shufflePlanets = <T,>(items: T[]) => {
 const featuredPlanets = shufflePlanets(planets as Planet[]).slice(0, 3);
 const totalPlanets = planets.length;
 const basePath = import.meta.env.BASE_URL;
-const normalizedBase =
-	basePath === '/' ? '' : `/${basePath.replace(/^\/+|\/+$/g, '')}`;
-const toBasePath = (path = '') => `${normalizedBase}/${path.replace(/^\/+/, '')}`;
-const toAssetPath = (path = '') =>
-	path.startsWith('/') ? `${normalizedBase}${path}` : `${normalizedBase}/${path}`;
+const normalizedBase = '';
+const toBasePath = (path = '') => `/${path.replace(/^\/+/,'')}`;
+const toAssetPath = (path = '') => path.startsWith('/') ? path : `/${path}`;
 const planetImages = import.meta.glob('../assets/planets/*.{jpg,jpeg,png,JPG,JPEG,PNG}', {
 	eager: true,
 	import: 'default',

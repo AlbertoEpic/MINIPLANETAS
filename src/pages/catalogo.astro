@@ -5,11 +5,9 @@ import { planetData } from '../data/planets';
 
 const planets = planetData;
 const basePath = import.meta.env.BASE_URL;
-const normalizedBase =
-	basePath === '/' ? '' : `/${basePath.replace(/^\/+|\/+$/g, '')}`;
-const toBasePath = (path = '') => `${normalizedBase}/${path.replace(/^\/+/, '')}`;
-const toAssetPath = (path = '') =>
-	path.startsWith('/') ? `${normalizedBase}${path}` : `${normalizedBase}/${path}`;
+const normalizedBase = '';
+const toBasePath = (path = '') => `/${path.replace(/^\/+/,'')}`;
+const toAssetPath = (path = '') => path.startsWith('/') ? path : `/${path}`;
 const nombresCientificos = [...new Set(planets.map((planet) => planet.nombreCientifico))].sort((a, b) =>
 	a.localeCompare(b, 'es', { sensitivity: 'base' })
 );
