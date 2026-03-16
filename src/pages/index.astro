@@ -36,9 +36,13 @@ const planetImages = import.meta.glob('../assets/planets/*.{jpg,jpeg,png,JPG,JPE
 	import: 'default',
 });
 
-const getOptimizedPlanetImage = (imagePath: string) => {
+const getOptimizedPlanetImage = (imagePath: string): string | ImageMetadata | undefined => {
 	const imageFileName = imagePath.split('/').pop() ?? '';
-	return Object.entries(planetImages).find(([filePath]) => filePath.endsWith(`/${imageFileName}`))?.[1];
+	const found = Object.entries(planetImages).find(([filePath]) => filePath.endsWith(`/${imageFileName}`))?.[1];
+	if (typeof found === 'string' || (found && typeof found === 'object' && 'src' in found)) {
+		return found as string | ImageMetadata;
+	}
+	return undefined;
 };
 ---
 
@@ -113,11 +117,14 @@ const getOptimizedPlanetImage = (imagePath: string) => {
 				<div class="featured-grid">
 				{featuredPlanets.map((planet, index) => (
 					<a class="planet-card" href={toBasePath(`planetas/${planet.slug}`)} style={`--delay:${index * 120}ms`}>
-						{getOptimizedPlanetImage(planet.image) ? (
-							<Image src={getOptimizedPlanetImage(planet.image)} alt={`Mini planeta ${planet.name}`} loading="lazy" />
-						) : (
-							<img src={toAssetPath(planet.image)} alt={`Mini planeta ${planet.name}`} loading="lazy" />
-						)}
+						{(() => {
+							const optimizedImg = getOptimizedPlanetImage(planet.image);
+							if (optimizedImg) {
+								return <Image src={optimizedImg} alt={`Mini planeta ${planet.name}`} loading="lazy" />;
+							} else {
+								return <img src={toAssetPath(planet.image)} alt={`Mini planeta ${planet.name}`} loading="lazy" />;
+							}
+						})()}
 						<div class="planet-meta">
 							<h2>{planet.name}</h2>
 							<p>{planet.description}</p>
