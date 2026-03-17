@@ -5,6 +5,6 @@ import { defineConfig } from 'astro/config';
 const isBuild = process.argv.includes('build');
 
 export default defineConfig({
-	site: 'https://albertoepic.github.io',
+	site: 'https://miniplanetas.soloquedalopeor.com',
 	base: '/',
 });
