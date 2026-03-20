@@ -5,6 +5,7 @@ import tripodeNodalImage from '../assets/como/tripodenodal.jpg';
 import dronImage from '../assets/como/dron.jpg';
 import myriAppImage from '../assets/como/myriApp.jpg';
 import goproPanoImage from '../assets/como/goproPano.jpg';
+import processPhotoImage from '../assets/planets/Planeta_Fiordo-de-Montearagón.jpg';
 import procesoImage from '../assets/como/proceso.png';
 
 const basePath = import.meta.env.BASE_URL;
@@ -72,11 +73,13 @@ const processPhotoPath = toBasePath('planets/Planeta_Fiordo-de-Montearagón.jpg'
 							</p>
 						</div>
 						<figure class="process-photo" aria-label="Mini planeta Fiordo de Montearagón">
-							<img
-								src={processPhotoPath}
+							<Image
+								src={processPhotoImage}
 								alt="Mini planeta Fiordo de Montearagón"
 								class="process-photo-img"
 								loading="lazy"
+								width={400}
+								height={400}
 							/>
 						</figure>
 					</div>
@@ -89,8 +92,8 @@ const processPhotoPath = toBasePath('planets/Planeta_Fiordo-de-Montearagón.jpg'
 						</p>
 						<div class="step-grid" aria-label="Técnicas principales de captura 360º">
 							<article class="step-item">
-								<img
-									src={tripodeNodalImage.src}
+								<Image
+									src={tripodeNodalImage}
 									alt="Cámara de fotos con trípode y rótula nodal"
 									class="step-item-image"
 									loading="lazy"
@@ -98,8 +101,8 @@ const processPhotoPath = toBasePath('planets/Planeta_Fiordo-de-Montearagón.jpg'
 								<span class="step-item-title">Cámara de fotos + Trípode con rótula nodal</span>
 							</article>
 							<article class="step-item">
-								<img
-									src={dronImage.src}
+								<Image
+									src={dronImage}
 									alt="Fotografía esférica con dron DJI"
 									class="step-item-image"
 									loading="lazy"
@@ -107,8 +110,8 @@ const processPhotoPath = toBasePath('planets/Planeta_Fiordo-de-Montearagón.jpg'
 								<span class="step-item-title">Fotografía esférica con el dron DJI</span>
 							</article>
 							<article class="step-item">
-								<img
-									src={myriAppImage.src}
+								<Image
+									src={myriAppImage}
 									alt="Fotografía esférica con teléfono y app MyriApp"
 									class="step-item-image"
 									loading="lazy"
@@ -116,8 +119,8 @@ const processPhotoPath = toBasePath('planets/Planeta_Fiordo-de-Montearagón.jpg'
 								<span class="step-item-title">PanoSphere con el teléfono y la App de Cámara de Google</span>
 							</article>
 							<article class="step-item">
-								<img
-									src={goproPanoImage.src}
+								<Image
+									src={goproPanoImage}
 									alt="Fotografías panorámicas con cámara de acción GoPro"
 									class="step-item-image"
 									loading="lazy"
@@ -145,8 +148,8 @@ const processPhotoPath = toBasePath('planets/Planeta_Fiordo-de-Montearagón.jpg'
 						</p>
 						<div class="step-highlight" aria-label="Magia matemática del Tiny Planet">
 							<p class="step-highlight-kicker">MAGIA MATEMÁTICA</p>
-							<img
-								src={procesoImage.src}
+							<Image
+								src={procesoImage}
 								alt="Esquema del proceso matemático Tiny Planet"
 								class="step-highlight-image"
 								loading="lazy"
@@ -425,7 +428,8 @@ const processPhotoPath = toBasePath('planets/Planeta_Fiordo-de-Montearagón.jpg'
 	}
 	.step-highlight-image {
 		float: right;
-		width: 300px;
+		width: 400px;
+		height: 666px;
 		max-width: 100%;
 		margin: .1rem 0 .65rem 1rem;
 		border-radius: .7rem;
@@ -565,7 +569,7 @@ const processPhotoPath = toBasePath('planets/Planeta_Fiordo-de-Montearagón.jpg'
 		}
 		.step-highlight-image {
 			float: none;
-			width: min(100%, 320px);
+			width: min(100%, 400px);
 			margin: .2rem auto .7rem;
 			display: block;
 		}

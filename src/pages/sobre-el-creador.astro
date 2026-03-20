@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import creatorPhoto from '../assets/creador/AlbertoEpic.jpg';
 import logoImage from '../assets/ui/logoMiniPlanetas.png';
+import creatorHighlightImage from '../assets/creador/creadorMP2.jpg';
 
 const basePath = import.meta.env.BASE_URL;
 const normalizedBase =
@@ -54,7 +55,7 @@ const isContactSent = Astro.url.searchParams.get('enviado') === '1';
 							src={creatorPhoto}
 							alt="Retrato de Alberto, creador de MINIPLANETAS"
 							class="creator-photo-img"
-							loading="lazy"
+							loading="eager"
 							sizes="(max-width: 900px) 92vw, 28rem"
 						/>
 					</figure>
@@ -63,7 +64,7 @@ const isContactSent = Astro.url.searchParams.get('enviado') === '1';
 						luz justa y rescatar detalles que suelen pasar desapercibidos.
 					</p>
 					<p>
-						Cada escena se trabaja para conservar su atmósfera original y, al mismo tiempo,
+	 					Cada escena se trabaja para conservar su esencia original y, al mismo tiempo,
 						convertirse en un pequeño mundo que invita a detenerse, imaginar y volver a mirar.
 					</p>
 					<p>
@@ -80,7 +81,7 @@ const isContactSent = Astro.url.searchParams.get('enviado') === '1';
 						src={creatorPhoto}
 						alt="Retrato de Alberto, creador de MINIPLANETAS"
 						class="creator-photo-img"
-						loading="lazy"
+							loading="eager"
 						sizes="(max-width: 900px) 92vw, 28rem"
 					/>
 				</figure>
@@ -93,12 +94,14 @@ const isContactSent = Astro.url.searchParams.get('enviado') === '1';
 			</blockquote>
 			<aside class="creator-highlight" aria-label="Dato destacado del creador">
 				<div class="creator-highlight-media">
-					<img
-						src={toBasePath('creadorMP2.jpg')}
-						alt="Alberto durante una sesión de captura"
-						class="creator-highlight-img"
-						loading="lazy"
-					/>
+						<Image
+							src={creatorHighlightImage}
+							alt="Alberto durante una sesión de captura"
+							class="creator-highlight-img"
+							loading="eager"
+							width={500}
+							height={500}
+						/>
 				</div>
 				<div class="creator-highlight-copy">
 					<p class="creator-highlight-kicker">Mirada personal</p>

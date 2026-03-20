@@ -12,8 +12,6 @@ type Planet = {
 	image360: string;
 	description: string;
 	nombreCientifico: string;
-	orbit: string;
-	size: string;
 };
 
 const planets = planetData;
@@ -120,15 +118,16 @@ const getOptimizedPlanetImage = (imagePath: string): string | ImageMetadata | un
 						{(() => {
 							const optimizedImg = getOptimizedPlanetImage(planet.image);
 							if (optimizedImg) {
-								return <Image src={optimizedImg} alt={`Mini planeta ${planet.name}`} loading="lazy" />;
+										return typeof optimizedImg === 'object' && 'src' in optimizedImg
+											? <Image src={optimizedImg} alt={`Mini planeta ${planet.name}`} loading="eager" width={optimizedImg.width} height={optimizedImg.height} />
+											: <img src={optimizedImg} alt={`Mini planeta ${planet.name}`} loading="eager" />;
 							} else {
-								return <img src={toAssetPath(planet.image)} alt={`Mini planeta ${planet.name}`} loading="lazy" />;
+								return <img src={toAssetPath(planet.image)} alt={`Mini planeta ${planet.name}`} loading="eager" />;
 							}
 						})()}
 						<div class="planet-meta">
 							<h2>{planet.name}</h2>
 							<p>{planet.description}</p>
-							<span>{planet.orbit} · {planet.size}</span>
 						</div>
 					</a>
 				))}

@@ -11,23 +11,10 @@ type Planet = {
 	image360?: string;
 	description: string;
 	nombreCientifico: string;
-	orbit: string;
-	size: string;
 	location: string;
 	coordinates: string;
-	atmosphere: string[];
 	discoveryDate: string;
 	equipment: string;
-	sheet: {
-		location: string;
-		coordinates: string;
-		atmosphere: string[];
-		discoveryDate: string;
-		equipment: string;
-		nombreCientifico: string;
-		orbit: string;
-		size: string;
-	};
 };
 
 export function getStaticPaths() {
@@ -42,8 +29,12 @@ const basePath = import.meta.env.BASE_URL;
 const normalizedBase =
 	basePath === '/' ? '' : `/${basePath.replace(/^\/+|\/+$/g, '')}`;
 const toBasePath = (path = '') => `${normalizedBase}/${path.replace(/^\/+/, '')}`;
-const toAssetPath = (path = '') =>
-	path.startsWith('/') ? `${normalizedBase}${path}` : `${normalizedBase}/${path}`;
+const toAssetPath = (path = '') => {
+	if (path.includes('/assets/planets/')) {
+		return `${normalizedBase}/src${path}`;
+	}
+	return path.startsWith('/') ? `${normalizedBase}${path}` : `${normalizedBase}/${path}`;
+};
 const toPublicAssetPath = (path = '') =>
 	typeof path === 'string' && normalizedBase && path.startsWith(`${normalizedBase}/`)
 		? path.slice(normalizedBase.length)
@@ -56,7 +47,7 @@ const planetImageFileName = planet.image.split('/').pop() ?? '';
 const optimizedPlanetImage = Object.entries(planetImages).find(([filePath]) =>
 	filePath.endsWith(`/${planetImageFileName}`)
 )?.[1] as ImageMetadata | undefined;
-const discoveryDate = new Date(planet.sheet.discoveryDate).toLocaleDateString('es-ES', {
+const discoveryDate = new Date(planet.discoveryDate).toLocaleDateString('es-ES', {
 	day: '2-digit',
 	month: 'long',
 	year: 'numeric',
@@ -82,6 +73,11 @@ const shareDescription =
 const feedbackFormId = import.meta.env.PUBLIC_FORMINIT_FEEDBACK_FORM_ID?.trim() ?? '';
 const feedbackAction = feedbackFormId ? `https://forminit.com/f/${feedbackFormId}` : '';
 const feedbackTextareaId = `feedback-message-${planet.slug}`;
+const planetIndex = planetData.findIndex(p => p.slug === planet.slug);
+const prevPlanet = planetData[planetIndex - 1] ?? planetData[planetData.length - 1];
+const nextPlanet = planetData[planetIndex + 1] ?? planetData[0];
+const leftArrowSVG = `<svg width='32' height='32' viewBox='0 0 24 24'><path d='M15 18l-6-6 6-6' stroke='currentColor' stroke-width='2' fill='none'/></svg>`;
+const rightArrowSVG = `<svg width='32' height='32' viewBox='0 0 24 24'><path d='M9 6l6 6-6 6' stroke='currentColor' stroke-width='2' fill='none'/></svg>`;
 ---
 
 <html lang="es">
@@ -113,6 +109,7 @@ const feedbackTextareaId = `feedback-message-${planet.slug}`;
 			rel="stylesheet"
 			href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Space+Grotesk:wght@400;500;600&display=swap"
 		/>
+		<link rel="stylesheet" href={toBasePath('src/styles/arrows.css')} />
 	</head>
 	<body>
 		<header class="top">
@@ -134,11 +131,17 @@ const feedbackTextareaId = `feedback-message-${planet.slug}`;
 		</header>
 
 		<main class="planet-view">
+			<a class="arrow arrow-left" href={toBasePath(`planetas/${prevPlanet.slug}`)} title="Anterior">
+				<img src="/src/assets/ui/anterior.png" alt="Anterior" class="arrow-img" />
+			</a>
+			<a class="arrow arrow-right" href={toBasePath(`planetas/${nextPlanet.slug}`)} title="Siguiente">
+				<img src="/src/assets/ui/siguiente.png" alt="Siguiente" class="arrow-img" />
+			</a>
 			<section class="visual">
 				{optimizedPlanetImage ? (
-					<Image src={optimizedPlanetImage} alt={`Vista grande de ${planet.name}`} loading="eager" data-main-image data-share-src={shareImageUrl} />
+					<Image src={optimizedPlanetImage} alt={`Vista grande de ${planet.name}`} loading="eager" width={optimizedPlanetImage.width} height={optimizedPlanetImage.height} data-main-image data-share-src={shareImageUrl} />
 				) : (
-					<img src={toAssetPath(planet.image)} alt={`Vista grande de ${planet.name}`} loading="eager" data-main-image data-share-src={shareImageUrl} />
+					<span style={{color:'red'}}>Imagen no encontrada</span>
 				)}
 			</section>
 
@@ -152,35 +155,21 @@ const feedbackTextareaId = `feedback-message-${planet.slug}`;
 				{planet.slug !== 'planeta-alquezar' && (
 					<p>
 						Este mini planeta surge de una captura 360° reinterpretada en formato polar. Su
-						composición resalta el equilibrio entre terreno, atmósfera y ritmo visual, creando una
+			 			composición resalta el equilibrio entre terreno y ritmo visual, creando una
 						lectura inmersiva en un solo vistazo.
 					</p>
 				)}
-				<div class="sheet">
-					<p><strong>Ubicación original:</strong> {planet.sheet.location}</p>
-					<p><strong>Coordenadas:</strong> {planet.sheet.coordinates}</p>
-					<div class="atmosphere">
-						<strong>Atmósfera:</strong>
-						<ul>
-							{planet.sheet.atmosphere.map((tag: string) => <li>{tag}</li>)}
-						</ul>
-					</div>
-					<p><strong>Fecha de descubrimiento:</strong> {discoveryDate}</p>
-					<p><strong>Equipo técnico:</strong> {planet.sheet.equipment}</p>
-				</div>
 				<div class="meta">
-					<div>
-						<span>Nombre científico</span>
-						<strong>{planet.sheet.nombreCientifico}</strong>
-					</div>
-					<div>
-						<span>Órbita</span>
-						<strong>{planet.sheet.orbit}</strong>
-					</div>
-					<div>
-						<span>Escala</span>
-						<strong>{planet.sheet.size}</strong>
-					</div>
+					   <div>
+						   <span>Nombre científico</span>
+						   <strong>{planet.nombreCientifico}</strong>
+					   </div>
+				</div>
+				<div class="sheet">
+						<p><strong>Ubicación original:</strong> {planet.location}</p>
+						<p><strong>Coordenadas:</strong> {planet.coordinates}</p>
+						<p><strong>Fecha de descubrimiento:</strong> {discoveryDate}</p>
+						<p><strong>Equipo técnico:</strong> {planet.equipment}</p>
 				</div>
 				<div class="actions-primary actions-primary-inline">
 					<button type="button" class="highlight action-card" data-open-fullscreen title="Click para ver el planeta a pantalla completa">
