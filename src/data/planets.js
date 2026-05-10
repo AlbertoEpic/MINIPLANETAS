@@ -11,6 +11,18 @@
     equipment: 'DJI Mini 5 Pro'
   },
   {
+    slug: 'planeta-albero-alto',
+    name: 'Planeta Albero Alto',
+    image: '../../assets/planets/Planeta_AlberoAlto.jpg',
+    image360: '/pano360/PANO-DRONE_AlberoAlto.jpg',
+    description: 'Durante años, este planeta cercano de nuestra propia galaxia pasó desapercibido en los mapas de observación de corto alcance. Sin embargo, en el último repaso de nuestro sistema estelar próximo, la nueva generación de cámaras de altísima resolución ha revelado un hallazgo extraordinario: señales inequívocas de civilización avanzada en una superficie completamente transformada de forma artificial. En la imagen principal se distingue con claridad una estructura aeroespacial de gran tamaño, un extraño cohete en posición de despegue, sorprendentemente similar a la Starship de SpaceX en la Tierra. Este indicio sugiere que sus habitantes ya han alcanzado la capacidad tecnológica para abandonar su mundo natal. Aún desconocemos si se trata de su primer intento de vuelo orbital o si, por el contrario, ya han realizado misiones previas fuera del planeta. Seguiremos monitorizando su evolución en próximas campañas de observación.',
+    nombreCientifico: '4LB3R0 4L70',
+    location: 'Albero Alto, galaxia H0Y4-D3-HV35C4',
+    coordinates: '42°03\'00.4"N 0°20\'12.3"W',
+    discoveryDate: '2026-05-09',
+    equipment: 'DJI Mini 5 Pro'
+  },
+  {
     slug: 'planeta-alquezar',
     name: 'Planeta Alquézar',
     image: '../../assets/planets/Planeta_Alquézar.jpg',
