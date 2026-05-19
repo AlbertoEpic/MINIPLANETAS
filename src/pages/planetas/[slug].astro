@@ -113,10 +113,9 @@ const shareImageFileName = planet.image.split('/').pop()?.replace(/\.(webp|png|j
 const shareImagePath = `/planets-share/${shareImageFileName}`;
 const shareImageUrl = shareImagePath; // Para uso en el DOM (relativo)
 const shareImageAbsoluteUrl = new URL(shareImagePath, siteUrl).toString();
+const descriptionText = planet.description.replace(/\s+/g, ' ').trim();
 const shareDescription =
-	planet.description.length > 200
-		? `${planet.description.slice(0, 197)}...`
-		: planet.description;
+	descriptionText.length > 200 ? `${descriptionText.slice(0, 197)}...` : descriptionText;
 const likesApiUrl = import.meta.env.PUBLIC_PLANET_LIKES_API_URL?.trim() ?? '';
 const planetIndex = planetData.findIndex(p => p.slug === planet.slug);
 const prevPlanet = planetData[planetIndex - 1] ?? planetData[planetData.length - 1];
@@ -299,9 +298,7 @@ const nextUrl = toBasePath(`planetas/${nextPlanet.slug}/`);
 					</button>
 				</div>
 				   <div class="lead-wrap">
-					   <p class="lead is-collapsed" data-description id="planet-description-text"
-						   set:html={planet.description.replace(/\n\n/g, '<br><br>')}
-					   ></p>
+					   	   <p class="lead is-collapsed" data-description id="planet-description-text" style="white-space: pre-line;">{planet.description}</p>
 					   <button type="button" class="lead-toggle" data-toggle-description aria-controls="planet-description-text" aria-expanded="false">Leer más...</button>
 				   </div>
 				{planet.slug !== 'planeta-alquezar' && (

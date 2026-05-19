@@ -205,6 +205,18 @@
     equipment: 'DJI Mini 5 Pro'
   },
   {
+    slug: 'planeta-frankfurt',
+    name: 'Planeta Frankfurt',
+    image: '../../assets/planets/Planeta_Frankfurt.jpg',
+    image360: '/pano360/PANO_Frankfurt.webp',
+    description: 'Navegando por los confines del ciberespacio, salimos al encuentro del cibernauta Mathias Weil. Llegado desde la remota galaxia 63RM4N1C4, Weil comparte un material espectacular de su mundo natal. A la espera de poder enviar a aquel lejano confín una misión propia, equipada con los sensores de última tecnología de la factoría SQLP, nos conformamos con esta imagen que, aun a baja resolución, resulta imponente y sobrecogedora. \n\n El documento nos descubre el Planeta Frankfurt en mitad de su noche orbital, un ciclo de oscuridad absoluta que se prolonga durante 17 meses. Lejos de detenerse, una próspera y avanzada civilización ocupa la totalidad de la superficie, perfectamente adaptada a las sombras. \n\n Bajo esta megaciudad global, el planeta late con furia: un núcleo incandescente de magma a altísimas temperaturas asoma de forma amenazante a través de una corteza resquebrajada. Un resplandor misterioso recorre las grietas en plena noche, sugiriendo una intensa actividad radioactiva. Por encima de este infierno de fuego y tecnología, se extiende una atmósfera limpia y cristalina, coronada por la silueta solitaria de su luna.',
+    nombreCientifico: 'FR4NKFURT',
+    location: 'Alemania',
+    coordinates: '50°1\'47.0"N 8°41\'0.0"E',
+    discoveryDate: '2026-05-18',
+    equipment: 'DJI Mavic 3 Pro'
+  },
+  {
     slug: 'planeta-garmo-negro',
     name: 'Planeta Garmo Negro',
     image: '../../assets/planets/Planeta_GarmoNegro.jpg',
