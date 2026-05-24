@@ -118,7 +118,29 @@
     location: 'Comodoto',
     coordinates: '42.763800, -0.565887',
     discoveryDate: '',
-    equipment: 'DJI Osmo Action 5 Pro'
+  },
+  {
+    slug: 'planeta-pacino',
+    name: 'Planeta Pacino',
+    image: '../../assets/planets/Planeta_Pacino.jpg',
+    image360: '/pano360/PANO_Pacino.jpg',
+    description: `Tras el cierre de la última campaña de exploración galáctica, los analistas de la factoría SQLP hemos tenido acceso a un intrigante y revolucionario descubrimiento. En esta ocasión, nuestra sonda espacial fue enviada en una audaz misión de reconocimiento hacia los dominios de la cercana galaxia Sallentis-d-Gallegus.
+
+  Al establecer órbita sobre el enigmático Planeta Pacino, los sensores ópticos de última generación capturaron una serie de fotografías de altísima resolución. Entre el material recibido, una imagen en particular ha desatado el caos y alborotado a toda la comunidad científica.
+
+  La Revelación de una Civilización Oculta
+  Hasta el día de hoy, la existencia de formas de vida en Pacino era un hecho constatado, pero la comunidad astronómica sospechaba muy poco de su verdadero potencial. Debido a su accidentada, abrupta y colosal orografía, los informes sugerían que se trataba de una civilización ancestral, aislada por el relieve y poco evolucionada tecnológicamente.
+
+  Pero los datos de alta resolución han destrozado esa teoría.
+
+  Oculta en los pliegues del terreno, la sonda ha descubierto una majestuosa base secreta de lanzamiento intergaláctico. Perfectamente mimetizada con el entorno natural para burlar las miradas del cosmos, la instalación albergaba en su centro un imponente cohete espacial. Los sistemas de la factoría estiman que la captura fue realizada en un instante crítico: ¡apenas unos momentos antes de su inminente lanzamiento hacia las estrellas!
+
+  Pacino ya no es un mundo del pasado; es una potencia silenciosa que vigila el espacio.`,
+    nombreCientifico: 'Planeta P4C1Z0',
+    location: 'Nebulosa de Sallentis-d-Gallegus',
+    coordinates: "42°45'36.6\"N 0°20'41.2\"W",
+    discoveryDate: '24-05-2026',
+    equipment: 'DJI Mini 5 Pro'
   },
   {
     slug: 'planeta-dunedupilat',
