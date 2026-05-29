@@ -628,7 +628,19 @@
     coordinates: "69°18'03.0\"N 19°26'16.7\"E",
     discoveryDate: '2018-11-09',
     equipment: 'Panasonic Lumix GX9'
-  }  
+  },  
+  {
+    slug: 'planeta-venecia',
+    name: 'Planeta Venecia',
+    image: '../../assets/planets/Planeta_SanMarcoVenecia.jpg',
+    image360: '/pano360/PANO_SanMarcoVenecia.jpg',
+    description: 'Continuando con el estudio sistemático de las galaxias más remotas del universo conocido, los telescopios del consorcio SQLP han vuelto a posarse sobre el lejano H0LMV455FJ3LL3T, y los datos recibidos han sacudido a toda la comunidad científica intergaláctica. Un dron de exploración silencioso, operando a gran altitud para no perturbar el entorno, capturó mediante teleobjetivo de alta precisión lo que puede ser el hallazgo biológico de la década: un ejemplar en estado salvaje de la especie Chelitas Pacus-Valoris, que se creía extinguida desde hacía varios ciclos estelares. La criatura se mostró esquiva y claramente ajena a ser observada, lo que otorga un valor excepcional a las imágenes obtenidas. En ellas se la puede contemplar inmóvil, ensimismada en sus propios pensamientos, con la mirada fija en el horizonte como si aguardara con infinita paciencia la aparición de alguna presa incauta. El hallazgo confirma de manera definitiva la existencia de vida en este mundo lejano. H0LMV455FJ3LL3T presenta en su polo sur una vasta reserva de agua en estado líquido, una orografía de una accidentada brutalidad que desafía cualquier cartografía convencional, y una atmósfera permanentemente borrascosa que envuelve el planeta en un manto de nubes densas y vientos furiosos, como si el propio astro tratara de proteger sus secretos de los ojos del universo.',
+    nombreCientifico: '54Z-M4RC0-V3N3C14',
+    location: 'Galaxia Italica',
+    coordinates: "45°26'03.1\"N 12°20'18.1\"E",
+    discoveryDate: '2026-05-29',
+    equipment: 'Google Street View'
+  } 
 ];
   
 
