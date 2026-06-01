@@ -644,6 +644,30 @@
     coordinates: "45°26'03.1\"N 12°20'18.1\"E",
     discoveryDate: '2026-05-29',
     equipment: 'Google Street View'
+  },
+  {
+    slug: 'planeta-rapitan',
+    name: 'Planeta Rapitán',
+    image: '../../assets/planets/Planeta_Rapitan.jpg',
+    image360: '/pano360/PANO_Rapitan.jpg',
+    description: `Enclavado en la nebulosa J4C4, el Planeta Rapitán emerge del vacío cósmico como un mundo forjado en el fuego de la batalla. Recientes análisis geológicos de la factoría SQLP han confirmado lo que los sensores orbitales ya intuían: Rapitán es un planeta marcado por un pasado bélico reciente, un mundo que apenas ha comenzado a sanar.
+
+El verdadero enigma de este mundo se halla en su hemisferio sur. Allí, en una inmensa depresión geográfica cercana al abismo legendario del Cráter 0R013L (un impacto titánico que domina el polo sur), nuestros exploradores han localizado un asentamiento permanente de seres. Pero es el monumento que domina este paisaje el que paraliza el aliento.
+
+La Fortaleza del Recuerdo Bélico
+Erigiéndose como un centinela de piedra sobre el horizonte, una edificación colosal, imponente y brutal, domina la zona. Este impresionante fuerte militar, perfectamente datado por nuestros sistemas entre los últimos 10.000 a 5.000 años estelares, se alza no como una defensa activa, sino como un austero monumento en recuerdo de las recientes contiendas bélicas que asolaron el planeta.
+
+El Misterio de la Escala: ¿Gigantes Cósmicos?
+El descubrimiento más sobrecogedor, sin embargo, ha llegado a través de una imagen capturada por la factoría SQLP. Nuestros analistas han estudiado detenidamente una toma crucial en la que aparece nuestro Rover Albertonety, enviado el año pasado a estudiar la geología local. La imagen muestra al pequeño rover tomando muestras del terreno en un claro de la depresión.
+
+Pero junto al Rover Albertonety se halla el indicio más inquietante de vida inteligente jamás registrado: ¡UN BANCO! de dimensiones colosales. Este objeto, de escala x3 respecto a una proporción humanoide estándar, sugiere una verdad ineludible. Rapitán no está habitado por simples supervivientes; es el hogar de una raza de envergadura monstruosa, de alrededor de 5 metros de altura.
+
+Rapitán es un enigma de piedra y guerra, un bastión de colosos que aguarda silencioso nuestro próximo paso en la exploración cósmica. `,
+    nombreCientifico: 'R4P1T4Z',
+    location: 'Nebulosa J4C4',
+    coordinates: "42°35'18.9\"N 0°32'10.8\"W",
+    discoveryDate: '2026-05-30',
+    equipment: 'dji mIni 5 pro'
   } 
 ];
   
