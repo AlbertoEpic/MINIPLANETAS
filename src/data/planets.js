@@ -668,6 +668,29 @@ Rapitán es un enigma de piedra y guerra, un bastión de colosos que aguarda sil
     coordinates: "42°35'18.9\"N 0°32'10.8\"W",
     discoveryDate: '2026-05-30',
     equipment: 'dji mIni 5 pro'
+  },
+  {
+    slug: 'planeta-arguis',
+    name: 'Planeta Arguis',
+    image: '../../assets/planets/Planeta_Arguis.jpg',
+    image360: '/pano360/PANO_Arguis.jpg',
+    description: `En las fronteras de nuestros mapas estelares se alza el Planeta Arguis, un mundo que ha encendido las alarmas de la factoría SQLP tras detectarse en él claros e inequívocos signos de vida inteligente. Al descender los sensores sobre su geografía, nos encontramos ante un fascinante cuadro evolutivo: un pequeño y concentrado núcleo poblacional que parece dar sus primeros y titubeantes pasos en los albores de su desarrollo civilizatorio.
+
+La estructura de este asentamiento responde a una jerarquía arcaica. Todo el entramado urbano gira en torno a una única y monumental construcción principal. Según los principales especialistas en xenocultura, esta majestuosa edificación funcionaría como una especie de templo sagrado para rendir culto al más allá. Estas costumbres místicas y espirituales vendrían a confirmar que los habitantes de Arguis aún no forman una sociedad de carácter interestelar, prefiriendo mirar al cielo con devoción antes que con ansias de conquista.
+
+El Enigma de la Atmósfera
+Sin embargo, el verdadero misterio de Arguis se despliega al alzar la vista. Una descomunal cantidad de siluetas voladoras pululan y surcan su atmósfera en un baile incesante. Ante este fenómeno, la comunidad científica de la factoría se debate entre dos teorías fascinantes:
+
+La Hipótesis Orgánica: Para algunos, se trata de una rica biodiversidad de especies voladoras autóctonas, lo que confirmaría que esta joven sociedad ha sabido prosperar sin dañar el ecosistema de su planeta natal.
+
+La Hipótesis Autómata: Una corriente más inquietante afirma que estas siluetas no son criaturas biológicas, sino enjambres de drones de vigilancia avanzados, centinelas implacables programados para mantener la ley y el orden en este extraño mundo.
+
+¿Es Arguis un edén primitivo o un planeta bajo una silenciosa tutela tecnológica? El enigma queda suspendido en sus cielos cristalinos. `,
+    nombreCientifico: '4R6V1S',
+    location: 'Galaxia M0ZR3P05',
+    coordinates: "42°18'52.1\"N 0°26'19.3\"W",
+    discoveryDate: '2026-06-01',
+    equipment: 'dji mIni 5 pro'
   } 
 ];
   
