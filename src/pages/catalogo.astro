@@ -89,6 +89,13 @@ const nombresCientificos = [...new Set(planets.map((planet) => planet.nombreCien
 						   {nombresCientificos.map((nombreCientifico) => <option value={nombreCientifico}>{nombreCientifico}</option>)}
 					   </select>
 				   </label>
+				<label>
+					<span>Ordenar por:</span>
+					<select id="sort-by">
+						<option value="alphabetical">Orden alfabético</option>
+						<option value="discoveryDate">Fecha de descubrimiento</option>
+					</select>
+				</label>
 				{/* Eliminado filtro de tamaño */}
 			</section>
 
@@ -102,6 +109,7 @@ const nombresCientificos = [...new Set(planets.map((planet) => planet.nombreCien
 						data-name={planet.name.toLowerCase()}
 						data-description={planet.description.toLowerCase()}
 						data-nombre-cientifico={planet.nombreCientifico}
+						data-discovery-date={planet.discoveryDate}
 						data-href={detailPath}
 						title="Ver ficha"
 					>
@@ -179,10 +187,93 @@ const nombresCientificos = [...new Set(planets.map((planet) => planet.nombreCien
 
 			const textInput = document.querySelector('#filter-text');
 			   const nombreCientificoSelect = document.querySelector('#filter-nombre-cientifico');
+			const sortBySelect = document.querySelector('#sort-by');
 			// Eliminado filtro de tamaño
 			const catalogGrid = document.querySelector('#catalog-grid');
 			const cards = Array.from(document.querySelectorAll('#catalog-grid .card'));
 			const interactiveSelector = 'a, button, input, select, textarea';
+
+			const monthMap = {
+				enero: 0,
+				febrero: 1,
+				marzo: 2,
+				abril: 3,
+				mayo: 4,
+				junio: 5,
+				julio: 6,
+				agosto: 7,
+				septiembre: 8,
+				octubre: 9,
+				noviembre: 10,
+				diciembre: 11,
+			};
+
+			const parseDiscoveryDate = (value) => {
+				if (!value) {
+					return null;
+				}
+
+				const normalized = value.trim().toLowerCase();
+				if (!normalized) {
+					return null;
+				}
+
+				const isoMatch = normalized.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+				if (isoMatch) {
+					const [, year, month, day] = isoMatch;
+					return Date.UTC(Number(year), Number(month) - 1, Number(day));
+				}
+
+				const dmyMatch = normalized.match(/^(\d{1,2})[-\/](\d{1,2})[-\/](\d{4})$/);
+				if (dmyMatch) {
+					const [, day, month, year] = dmyMatch;
+					return Date.UTC(Number(year), Number(month) - 1, Number(day));
+				}
+
+				const textMonthMatch = normalized.match(/^(\d{1,2})\s+([a-záéíóúñ]+)\s+(\d{4})$/);
+				if (textMonthMatch) {
+					const [, day, monthName, year] = textMonthMatch;
+					const monthIndex = monthMap[monthName];
+					if (Number.isInteger(monthIndex)) {
+						return Date.UTC(Number(year), monthIndex, Number(day));
+					}
+				}
+
+				const parsed = Date.parse(normalized);
+				return Number.isNaN(parsed) ? null : parsed;
+			};
+
+			const sortCards = () => {
+				const sortBy = sortBySelect?.value || 'alphabetical';
+				const sortedCards = [...cards].sort((a, b) => {
+					if (sortBy === 'discoveryDate') {
+						const aDate = parseDiscoveryDate(a.dataset.discoveryDate || '');
+						const bDate = parseDiscoveryDate(b.dataset.discoveryDate || '');
+
+						if (aDate === null && bDate === null) {
+							return (a.dataset.name || '').localeCompare(b.dataset.name || '', 'es', { sensitivity: 'base' });
+						}
+
+						if (aDate === null) {
+							return 1;
+						}
+
+						if (bDate === null) {
+							return -1;
+						}
+
+						if (bDate !== aDate) {
+							return bDate - aDate;
+						}
+					}
+
+					return (a.dataset.name || '').localeCompare(b.dataset.name || '', 'es', { sensitivity: 'base' });
+				});
+
+				sortedCards.forEach((card) => {
+					catalogGrid?.appendChild(card);
+				});
+			};
 
 			const runFilters = () => {
 			   const text = textInput?.value.toLowerCase().trim() || '';
@@ -197,10 +288,14 @@ const nombresCientificos = [...new Set(planets.map((planet) => planet.nombreCien
 				   const matchesNombreCientifico = !nombreCientifico || card.dataset.nombreCientifico === nombreCientifico;
 				   card.style.display = matchesText && matchesNombreCientifico ? '' : 'none';
 			   });
+
+				sortCards();
 			};
 
 			textInput?.addEventListener('input', runFilters);
 			nombreCientificoSelect?.addEventListener('change', runFilters);
+			sortBySelect?.addEventListener('change', runFilters);
+			runFilters();
 
 			cards.forEach((card) => {
 				const navigateToCard = () => {
