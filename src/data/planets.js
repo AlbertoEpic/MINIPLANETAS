@@ -691,7 +691,29 @@ La Hipótesis Autómata: Una corriente más inquietante afirma que estas silueta
     coordinates: "42°18'52.1\"N 0°26'19.3\"W",
     discoveryDate: '2026-06-01',
     equipment: 'dji mIni 5 pro'
-  } 
+  },
+
+  {
+    slug: 'planeta-peña-sabocos',
+    name: 'Planeta Peña Sabocos',
+    image: '../../assets/planets/Planeta_Sabocos.jpg',
+    image360: '/pano360/PANO_Sabocos.jpg',
+    description: `El Guardián del Abismo
+A su regreso de la exitosa misión en el remoto planeta Garmo Negro, la sonda espacial de la factoría SQLP interceptó de forma imprevista la órbita de este enigmático mundo. A pesar de su asombrosa cercanía a nuestro propio sistema solar, Peña Sabocos sigue siendo un territorio apenas visitado y envuelto en el misterio.
+
+A primera vista, sus sensores detectaron una atmósfera totalmente limpia y cristalina que, según los manuales estelares, indicaría una absoluta ausencia de vida. Sin embargo, un análisis más detallado ha revelado dos anomalías que han desconcertado a nuestros analistas:
+
+El Centinela Cósmico: Una extraña e imponente forma de vida ha sido localizada en la superficie, apostada como un guardián impasible sobre un gran bastión de roca. Los sistemas de la sonda sugieren que el ser parece intentar comunicarse con nosotros mediante un código de señales completamente desconocido.
+
+Las Cicatrices del Pasado: En las profundidades de las colosales fallas que agrietan la corteza del planeta, los escáneres han adivinado alteraciones artificiales en el terreno; obras de ingeniería sin duda producidas por una civilización ancestral.
+
+En general, Peña Sabocos se presenta como un mundo de orografía traumática, extremadamente accidentada y hostil en su hemisferio sur, mientras que el norte ofrece un relieve algo más suave y domesticado. Un titán de piedra que aguarda en silencio a las puertas de nuestro sistema. `,
+    nombreCientifico: 'P3Ñ4 54B0C05',
+    location: 'Nebulosa de Panticous',
+    coordinates: "42°40'45.4\"N 0°15'06.5\"W",
+    discoveryDate: '2026-06-03',
+    equipment: 'dji mIni 5 pro'
+  }  
 ];
   
 
