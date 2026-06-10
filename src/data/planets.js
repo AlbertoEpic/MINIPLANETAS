@@ -713,7 +713,25 @@ En general, Peña Sabocos se presenta como un mundo de orografía traumática, e
     coordinates: "42°40'45.4\"N 0°15'06.5\"W",
     discoveryDate: '2026-06-03',
     equipment: 'dji mIni 5 pro'
-  }  
+  },
+
+  {
+    slug: 'planeta-pantano-de-arguis',
+    name: 'Planeta Pantano de Arguis',
+    image: '../../assets/planets/Planeta_Arguis-pantano.jpg',
+    image360: '/pano360/PANO_Arguis-pantano.jpg',
+    description: `El Oasis Fluvial
+En los registros estelares de la factoría SQLP, este pequeño mundo fue catalogado originalmente como una simple luna en órbita del imponente Planeta Arguis. Sin embargo, los últimos datos recopilados por nuestras sondas de reconocimiento han obligado a los astrofísicos a mirarlo con ojos completamente nuevos, transformando este satélite en uno de los objetivos más codiciados de la exploración espacial.
+
+El motivo de tal asombro es tan simple como revolucionario: sus cuencas brillan con una inmensa cantidad de agua líquida en superficie. Este vital elemento, que fluye libremente bajo la mirada de su planeta madre, rompe la tónica de los mundos áridos de la región y enciende en la comunidad científica las más firmes esperanzas de hallar nuevas y fascinantes formas de vida en su interior.
+
+El Pantano de Arguis ha dejado de ser una mera sombra orbital para convertirse en el oasis del sistema; un reducto acuático cuyas profundidades aguardan el momento de revelar sus secretos biológicos a nuestros sensores. `,
+    nombreCientifico: 'P4Z74Z0 D3 4R6V15',
+    location: 'Galaxia M0ZR3P05',
+    coordinates: "42°18'21.5\"N 0°25'50.6\"W",
+    discoveryDate: '2026-06-01',
+    equipment: 'dji mIni 5 pro'
+  }    
 ];
   
 
