@@ -731,6 +731,29 @@ El Pantano de Arguis ha dejado de ser una mera sombra orbital para convertirse e
     coordinates: "42°18'21.5\"N 0°25'50.6\"W",
     discoveryDate: '2026-06-01',
     equipment: 'dji mIni 5 pro'
+  },
+
+  {
+    slug: 'planeta-quinzano',
+    name: 'Planeta Quinzano',
+    image: '../../assets/planets/Planeta_Quinzano.jpg',
+    image360: '/pano360/PANO-DRONE_Quinzano.jpg',
+    description: `Durante el viaje de regreso a la sede central de la factoría SQLP, tras concluir la gran expedición interestelar al remoto planeta M4II05-D3-R16I05, nuestra tripulación realizó una escala imprevista en este pequeño y recóndito satélite. Lo que a primera vista parecía un páramo olvidado resultó ser un crisol de vida: un reducto fronterizo donde, a duras penas, sobrevive una singular colonia compuesta por todo tipo de seres y viajeros errantes de las estrellas.
+
+Este puesto de avanzada, bautizado formalmente como La Colonia 15, es el corazón latente que da nombre al propio Planeta Quinzano. En este rincón del cosmos, la vida no es fácil; la colonia resiste y prospera gracias al incesante intercambio comercial con los viajeros intergalácticos que cruzan la ruta, complementado con una agricultura de subsistencia muy básica que desafía las condiciones del terreno.
+
+Geográficamente, Quinzano es un mundo de grandes contrastes:
+
+El Hemisferio Sur: Una llanura infinita y despejada, un horizonte llano que sirve de pista de aterrizaje natural para las naves cansadas que buscan refugio.
+
+El Hemisferio Norte: Un territorio escarpado y fuertemente montañoso, cuyas cumbres protegen la colonia de los vientos cósmicos.
+
+Quinzano no busca la conquista del espacio, sino ser el último faro de hospitalidad para quienes navegan por el vacío. `,
+    nombreCientifico: 'QV1NZ4N0',
+    location: 'Nebulosa de la H0Y4',
+    coordinates: "42°14'40.0\"N 0°36'34.8\"W",
+    discoveryDate: '2026-06-11',
+    equipment: 'dji mIni 5 pro'
   }    
 ];
   
