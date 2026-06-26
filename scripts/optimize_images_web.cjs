@@ -1,7 +1,10 @@
+console.log("=== INICIANDO SCRIPT DE OPTIMIZACIÓN ===");
+
 const fs = require('fs');
 const path = require('path');
 const sharp = require('sharp');
 
+// Rutas base
 const srcDir = path.join(__dirname, '../src/assets/planets');
 const responsiveDir = path.join(__dirname, '../public/planets-responsive');
 const shareDirs = [
@@ -9,6 +12,7 @@ const shareDirs = [
   path.join(__dirname, '../src/assets/planets-share'),
 ];
 
+// Configuración de optimización
 const responsiveWidths = [480, 768, 1024, 1400];
 const allowedExtensions = new Set(['.jpg', '.jpeg', '.png']);
 const responsiveQualityByWidth = {
@@ -83,10 +87,41 @@ async function main() {
   ensureDir(responsiveDir);
   shareDirs.forEach(ensureDir);
 
-  const files = fs.readdirSync(srcDir).filter((file) => {
-    const ext = path.extname(file).toLowerCase();
-    return allowedExtensions.has(ext);
-  });
+  const argumentoImagen = process.argv[2];
+  let files = [];
+
+  if (argumentoImagen) {
+    // Normalizamos barras de Windows y extraemos solo el nombre del archivo
+    const rutaNormalizada = argumentoImagen.replace(/\\/g, '/');
+    const fileName = path.basename(rutaNormalizada);
+    const ext = path.extname(fileName).toLowerCase();
+    
+    if (!allowedExtensions.has(ext)) {
+      console.error(`❌ Error: El formato ${ext} no está permitido.`);
+      return;
+    }
+    
+    const rutaDestinoValidar = path.join(srcDir, fileName);
+    if (!fs.existsSync(rutaDestinoValidar)) {
+      console.error(`❌ Error: No se encuentra la imagen "${fileName}" en la carpeta de origen:\n   ${srcDir}`);
+      return;
+    }
+    
+    files = [fileName];
+    console.log(`🎯 Procesando únicamente la imagen: ${fileName}\n`);
+  } else {
+    // Si no hay argumentos, procesa toda la carpeta
+    files = fs.readdirSync(srcDir).filter((file) => {
+      const ext = path.extname(file).toLowerCase();
+      return allowedExtensions.has(ext);
+    });
+    console.log(`📁 Procesando todas las imágenes de la carpeta (${files.length} encontradas)\n`);
+  }
+
+  if (files.length === 0) {
+    console.log('⚠️ No hay imágenes válidas para procesar.');
+    return;
+  }
 
   let ok = 0;
   let failed = 0;
@@ -99,22 +134,22 @@ async function main() {
       await writeResponsiveVariants(srcPath, fileName);
       await writeShareImages(srcPath, fileName, ext);
       ok += 1;
-      console.log(`OK: ${fileName}`);
+      console.log(`✅ OK: ${fileName}`);
     } catch (error) {
       failed += 1;
-      console.error(`ERROR: ${fileName}`);
+      console.error(`❌ ERROR: ${fileName}`);
       console.error(error.message || error);
     }
   }
 
-  console.log('---');
+  console.log('\n---');
   console.log(`Procesadas correctamente: ${ok}`);
   console.log(`Con error: ${failed}`);
   console.log('Salidas generadas en public/planets-responsive y planets-share.');
 }
 
 main().catch((error) => {
-  console.error('Fallo general en optimizacion de imagenes.');
+  console.error('❌ Fallo general en optimizacion de imagenes.');
   console.error(error.message || error);
   process.exit(1);
 });
