@@ -754,7 +754,29 @@ Quinzano no busca la conquista del espacio, sino ser el último faro de hospital
     coordinates: "42°14'40.0\"N 0°36'34.8\"W",
     discoveryDate: '2026-06-11',
     equipment: 'dji mIni 5 pro'
-  }    
+  },
+
+  {
+    slug: 'planeta-graus',
+    name: 'Planeta Graus',
+    image: '../../assets/planets/Planeta_Graus.jpg',
+    image360: '/pano360/PANO-DRONE_Graus.jpg',
+    description: `Los mapas cósmicos se expanden tras el último hallazgo de la factoría SQLP: un nuevo planeta que emite señales claras y rotundas de albergar vida fuertemente evolucionada. El descubrimiento ha sido posible gracias a las imágenes de altísima resolución proporcionadas por nuestros revolucionarios telescopios magmacentrípetos de vanguardia, cuyos sensores han captado una serie de evidencias inequívocas que ya fascinan a nuestros astrobiólogos.
+
+Al aproximar la óptica a la superficie, el paisaje revela un complejo entramado de ingeniería: una gran concentración de estructuras artificiales dispuestas estratégicamente. Los primeros análisis sugieren que este enclave funciona como un monumental refugio de frontera, diseñado para dar cobijo y suministros a los fatigados viajeros interestelares que surcan este sector del universo. La ubicación no es casual, ya que el asentamiento prospera junto a una inmensa concentración de agua líquida, un recurso vital y codiciado en el vacío cósmico.
+
+Sin embargo, lo que eleva a Graus a la categoría de mito es su centro espiritual y defensivo:
+
+* El Tótem Ancestral: Presidiendo todo el conglomerado artificial, se alza un extraño y majestuoso tótem. Los expertos en xenocultura teorizan que representa a una antigua deidad cósmica a la que los seres de este mundo rinden un fervoroso culto ancestral.
+* Los Guardianes Silenciosos: En esa misma atalaya de vigilancia, bajo la sombra del tótem, nuestros telescopios han logrado distinguir las siluetas de dos alienígenas antropomorfos. Permanecen allí apostados, imperturbables en sus labores de avanzada, vigilando el firmamento a la espera de la llegada de nuevos viajeros intergalácticos.
+
+Graus se erige así como un punto de encuentro en la inmensidad; un refugio de fe, agua y piedra que vigila las rutas del espacio profundo. `,
+    nombreCientifico: '6R4U5',
+    location: 'Galaxia R1B460Rz4',
+    coordinates: "42°11'13.0\"N 0°20'07.0\"E",
+    discoveryDate: '2026-07-03',
+    equipment: 'dji mIni 5 pro'
+  }     
 ];
   
 
