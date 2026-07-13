@@ -775,7 +775,24 @@ Graus se erige así como un punto de encuentro en la inmensidad; un refugio de f
     location: 'Galaxia R1B460Rz4',
     coordinates: "42°11'13.0\"N 0°20'07.0\"E",
     discoveryDate: '2026-07-03',
-    equipment: 'dji mIni 5 pro'
+    equipment: 'dji Mini 5 pro'
+  },
+
+  {
+    slug: 'planeta-fort_du_portalet',
+    name: 'Planeta Fort du Portalet',
+    image: '../../assets/planets/Planeta_Fort_du_Portalet.jpg',
+    image360: '/pano360/PANO-DRONE_Fort_du_Portalet.jpg',
+    description: `Este cuerpo celeste, recientemente catalogado, posee un tamaño tan reducido e irregular que bien podría clasificarse como un asteroide, desafiando las definiciones astronómicas convencionales. Sin embargo, su valor estratégico es incalculable. Ha sido aprovechado con astucia por las civilizaciones de este recóndito rincón del universo para establecer una base espacial de reabastecimiento y descanso, un enclave vital en las rutas de los largos viajes intergalácticos.
+
+Originalmente, su superficie se presentaba como un entorno eminentemente rocoso, escarpado y hostil. A pesar de estas condiciones adversas, los ingenieros estelares se las han arreglado para erigir estructuras sólidas y camufladas en la piedra, capaces de soportar el trasiego constante de naves y la logística de un puerto de alta montaña espacial. Una sinuosa vía de comunicación artificial recorre el relieve, conectando los diferentes niveles de la fortaleza.
+
+El verdadero milagro de este astro reside en su hemisferio superior: mediante avanzadas técnicas hidropónicas y de soporte vital, han conseguido hacer prosperar un auténtico vergel. Bosques densos y una vegetación vibrante cubren ahora la roca, haciendo albergar firmes esperanzas en la futura terraformación completa de este original fragmento mineral. Es un testimonio de cómo la tecnología y la vida pueden florecer incluso en el abismo más inhóspito del espacio.`,
+    nombreCientifico: 'F0R7 DV P0R74L37',
+    location: 'Nebulosa B34RN',
+    coordinates: "42°53'11.4\"N 0°33'49.3\"W",
+    discoveryDate: '2026-07-12',
+    equipment: 'dji Mini 5 pro'
   }     
 ];
   
