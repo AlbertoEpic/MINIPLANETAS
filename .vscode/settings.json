@@ -4,5 +4,9 @@
         "git commit": true,
         "git push": true
     },
-    "files.participants.timeout": 90000
+    "files.participants.timeout": 90000,
+    "chat.agent.thinking.phrases": {
+        "mode": "append",
+        "phrases": []
+    }
 }
