@@ -793,7 +793,22 @@ El verdadero milagro de este astro reside en su hemisferio superior: mediante av
     coordinates: "42°53'11.4\"N 0°33'49.3\"W",
     discoveryDate: '2026-07-12',
     equipment: 'dji Mini 5 pro'
-  }     
+  },
+
+  {
+    slug: 'planeta-collado-musales',
+    name: 'Planeta Collado de Musales',
+    image: '../../assets/planets/Planeta_ColladoMusales.jpg',
+    image360: '/pano360/PANO-DRONE_ColladoMusales.jpg',
+    description: `Este nuevo planeta de la Constelación 73N4 presenta una superficie excepcionalmente accidentada, dominada por cañones abisales y cresterías escarpadas. Sin embargo, su atmósfera convulsa —cargada de vapor y con grandes reservas de agua líquida en el fondo de sus circos— sugiere que en las profundidades de los valles o en su cara oculta prospera una civilización avanzada e invisible.
+
+La prueba de esta cultura superior se halla en su cumbre más alta: una atalaya de observación donde un vigilante planetario custodiase el territorio. Junto a él descansa su máquina de hacer felicidad, un vehículo de propulsión de alta velocidad capaz de transportarle en segundos por las grietas del terreno para dar la voz de alarma ante cualquier visita cósmica. Un astro de alerta constante, ingeniería fúngica y libertad mineral.`,
+    nombreCientifico: 'C0114D0 MV54135',
+    location: 'Constelación 73N4',
+    coordinates: "42°48'24.4\"N 0°18'30.9\"W",
+    discoveryDate: '2026-08-25',
+    equipment: 'dji Mini 5 pro'
+  }       
 ];
   
 
