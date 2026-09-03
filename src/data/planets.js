@@ -779,9 +779,9 @@ Graus se erige así como un punto de encuentro en la inmensidad; un refugio de f
   },
 
   {
-    slug: 'planeta-fort_du_portalet',
+    slug: 'planeta_fort-du-portalet',
     name: 'Planeta Fort du Portalet',
-    image: '../../assets/planets/Planeta-Fort_du_Portalet.jpg',
+    image: '../../assets/planets/Planeta_Fort-du-Portalet.jpg',
     image360: '/pano360/PANO-DRONE_Fort_du_Portalet.jpg',
     description: `Este cuerpo celeste, recientemente catalogado, posee un tamaño tan reducido e irregular que bien podría clasificarse como un asteroide, desafiando las definiciones astronómicas convencionales. Sin embargo, su valor estratégico es incalculable. Ha sido aprovechado con astucia por las civilizaciones de este recóndito rincón del universo para establecer una base espacial de reabastecimiento y descanso, un enclave vital en las rutas de los largos viajes intergalácticos.
 
