@@ -779,7 +779,7 @@ Graus se erige así como un punto de encuentro en la inmensidad; un refugio de f
   },
 
   {
-    slug: 'planeta_fort-du-portalet',
+    slug: 'planeta-fort-du-portalet',
     name: 'Planeta Fort du Portalet',
     image: '../../assets/planets/Planeta_Fort-du-Portalet.jpg',
     image360: '/pano360/PANO-DRONE_Fort_du_Portalet.jpg',
