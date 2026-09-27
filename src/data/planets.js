@@ -808,6 +808,23 @@ La prueba de esta cultura superior se halla en su cumbre más alta: una atalaya 
     coordinates: "42°48'24.4\"N 0°18'30.9\"W",
     discoveryDate: '2026-08-25',
     equipment: 'dji Mini 5 pro'
+  },
+
+  {
+    slug: 'planeta-tres-guegas',
+    name: 'Planeta Tres Güegas',
+    image: '../../assets/planets/Planeta_3Güegas.jpg',
+    image360: '/pano360/PANO-DRONE_3Güegas.jpg',
+    description: `El periplo de nuestras sondas por la Constelación 73N4 continúa dando grandes frutos. En esta ocasión, la sonda SQLP-TodoloBor ha logrado entrar con éxito en la órbita de este cuerpo estelar recién descubierto con la misión de cartografiarlo y descifrar sus enigmas geológicos.
+
+  El Planeta Tres Güegas se presenta con una superficie francamente accidentada, un laberinto de imponentes paredes rocosas, laderas doradas y abismos abruptos que moldean su fisonomía. Aunque hasta el momento no se ha identificado de forma directa ninguna entidad de vida inteligente, el análisis de los escáneres sugiere que habiten ocultos en algún lugar de la geografía profunda; la topografía muestra sutiles alteraciones artificiales que solo podrían ser obra de una civilización avanzada.
+
+  Todo esto se enmarca en un entorno de atmósfera perfectamente limpia y cristalina, testimonio de un mundo virgen y en absoluto contaminado que refleja con brillantez la luz estelar sobre sus bastiones de piedra.`,
+    nombreCientifico: '7R35 GÜ3G45',
+    location: 'Constelación 73N4',
+    coordinates: "42°45'00.5\"N 0°25'10.8\"W",
+    discoveryDate: '2026-09-22',
+    equipment: 'dji Mini 5 pro'
   }       
 ];
   
