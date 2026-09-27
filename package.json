@@ -13,13 +13,13 @@
     "likes:dev": "npm --prefix serverless-forms run dev"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.10",
     "astro": "^6.1.1",
     "sharp": "^0.34.5",
     "typescript": "^6.0.0"
   },
   "devDependencies": {
     "@types/node": "^25.4.0",
+    "@astrojs/check": "^0.9.10",
     "gh-pages": "^6.3.0"
   }
 }
