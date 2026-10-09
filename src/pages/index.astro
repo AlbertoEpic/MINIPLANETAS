@@ -75,6 +75,9 @@ const getOptimizedPlanetImage = (imagePath: string): string | ImageMetadata | un
 				<a href={toBasePath('catalogo')}>Catálogo</a>
 				<a href={toBasePath('como-nace-un-mini-planeta')}>¿Cómo nace un mini-planeta?</a>
 				<a href={toBasePath('sobre-el-creador')}>Sobre el creador</a>
+				<a href="https://www.soloquedalopeor.com" aria-label="Visitar Soloquedalopeor.com" style="display: flex; align-items: center;">
+					<img src="https://www.soloquedalopeor.com/_assets/favicon.Cisj02S_.png" alt="" width="40" height="40" style="display: block; width: 40px; height: 40px; object-fit: contain;" />
+				</a>
 			</nav>
 		</header>
 
@@ -275,6 +278,7 @@ const getOptimizedPlanetImage = (imagePath: string): string | ImageMetadata | un
 
 	.top-nav {
 		display: flex;
+		align-items: center;
 		gap: 1.25rem;
 		font-size: 0.95rem;
 	}
@@ -614,6 +618,7 @@ const getOptimizedPlanetImage = (imagePath: string): string | ImageMetadata | un
 		.top-nav {
 			width: 100%;
 			flex-direction: column;
+			align-items: flex-start;
 			gap: 0.55rem;
 			padding-top: 0;
 			border-top: 1px solid transparent;

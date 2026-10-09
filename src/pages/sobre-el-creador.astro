@@ -42,6 +42,9 @@ const isContactSent = Astro.url.searchParams.get('enviado') === '1';
 				<a href={toBasePath('catalogo')}>Catalogo</a>
 				<a href={toBasePath('como-nace-un-mini-planeta')}>Como nace un mini-planeta?</a>
 				<a href={toBasePath('sobre-el-creador')} aria-current="page">Sobre el creador</a>
+				<a href="https://www.soloquedalopeor.com" aria-label="Visitar Soloquedalopeor.com" style="display: flex; align-items: center;">
+					<img src="https://www.soloquedalopeor.com/_assets/favicon.Cisj02S_.png" alt="" width="40" height="40" style="display: block; width: 40px; height: 40px; object-fit: contain;" />
+				</a>
 			</nav>
 		</header>
 
@@ -259,7 +262,7 @@ const isContactSent = Astro.url.searchParams.get('enviado') === '1';
 		margin-block: -0.2rem;
 		object-fit: contain;
 	}
-	.top-nav { display: flex; gap: 1.2rem; }
+	.top-nav { display: flex; align-items: center; gap: 1.2rem; }
 	.menu-toggle {
 		display: none;
 		width: 2.75rem;
@@ -583,6 +586,7 @@ const isContactSent = Astro.url.searchParams.get('enviado') === '1';
 		.top-nav {
 			width: 100%;
 			flex-direction: column;
+			align-items: flex-start;
 			gap: .55rem;
 			padding-top: 0;
 			border-top: 1px solid transparent;
