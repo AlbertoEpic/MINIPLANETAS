@@ -825,6 +825,23 @@ La prueba de esta cultura superior se halla en su cumbre más alta: una atalaya 
     coordinates: "42°45'00.5\"N 0°25'10.8\"W",
     discoveryDate: '2026-09-22',
     equipment: 'dji Mini 5 pro'
+  },
+
+  {
+    slug: 'planeta-benasque',
+    name: 'Planeta Benasque',
+    image: '../../assets/planets/Planeta_Benasque-noche1.jpg',
+    image360: '/pano360/PANO-DRONE_Benasque-noche.jpg',
+    description: `Durante incontables ciclos de búsqueda por los confines más remotos del espacio, los exploradores del consorcio SQLP han localizado un extraordinario planeta errante, vagando en solitario por regiones tan alejadas de cualquier estrella que la luz jamás ha llegado a conocer su superficie. 
+    
+    Condenado a una noche perpetua, este mundo parecía, a primera vista, una esfera agrietada cuyas heridas dejaban escapar el resplandor incandescente de sus entrañas, como si un antiguo cataclismo hubiera quebrado su corteza y amenazara con consumirlo desde dentro. Sin embargo, al aproximarnos con nuestros instrumentos de observación de largo alcance, descubrimos que aquellas fisuras luminosas ocultaban un secreto mucho más fascinante: no eran cicatrices de destrucción, sino las huellas de una civilización desconocida. 
+    
+    Bajo la oscuridad absoluta se extiende una compleja red de asentamientos, caminos y estructuras que brillan con una intensidad asombrosa, dibujando sobre la superficie del astro el mapa de una sociedad que ha aprendido a fabricar su propia luz para sobrevivir en ausencia de cualquier amanecer. Allí donde otros mundos conocen el ciclo inmutable de los días y las noches, sus habitantes han levantado un universo artificial de luminarias, alimentando con ellas sus ciudades y arrancando a las tinieblas el espacio necesario para prosperar. ¿Qué tecnología permite mantener encendida semejante red en un planeta condenado a vagar eternamente por el vacío? ¿Qué acontecimientos obligaron a sus moradores a desarrollar una existencia al margen de las estrellas? Por ahora, nuestras observaciones no ofrecen respuestas concluyentes. Pero una certeza emerge de esta primera expedición: incluso en los rincones más oscuros del cosmos, la inteligencia puede encontrar la manera de encender una luz propia y convertir la soledad infinita en un hogar.`,
+    nombreCientifico: 'B3Z45QV3',
+    location: 'Constelación R1B460RZ4',
+    coordinates: "42°36'17.3\"N 0°31'17.5\"E",
+    discoveryDate: '2026-10-11',
+    equipment: 'dji Mini 5 pro'
   }       
 ];
   
