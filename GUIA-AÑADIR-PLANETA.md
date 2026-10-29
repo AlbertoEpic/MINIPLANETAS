@@ -40,6 +40,8 @@ src/assets/planets/Planeta_ValleDeOrdesa.jpg
 
 Esta es la **única carpeta** en la que tienes que meter la imagen a mano. El resto de tamaños y versiones se generan automáticamente en el siguiente paso.
 
+> Las imágenes originales también se incluyen en el despliegue (incluidas las panorámicas de `public/pano360/`). Cloudflare limita cada archivo a 25 MiB, así que mantén cada original por debajo de 20 MiB para dejar margen; generar versiones optimizadas no reduce el tamaño del original.
+
 ---
 
 ## 2. Genera automáticamente las versiones optimizadas de la imagen
