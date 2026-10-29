@@ -842,6 +842,23 @@ La prueba de esta cultura superior se halla en su cumbre más alta: una atalaya 
     coordinates: "42°36'17.3\"N 0°31'17.5\"E",
     discoveryDate: '2026-10-11',
     equipment: 'dji Mini 5 pro'
+  },
+
+  {
+    slug: 'planeta-hayedo-peiro',
+    name: 'Planeta Hayedo del Peiro',
+    image: '../../assets/planets/Planeta-Hayedo-Peiro.jpg',
+    image360: '/pano360/PANO-DRONE_Hayedo-Peiro.jpg',
+    description: `En su periplo rutinario por nuestro Sistema Solar, la sonda SQLP-TodoloBor ha realizado un descubrimiento sin precedentes. Nos encontramos ante un nuevo concepto de planeta: un mundo constituido por un núcleo sólido a partir del cual emergen una gran cantidad de extensiones —aparentemente formas de vida vegetal, o tal vez el planeta en sí mismo es un ente vital- que mantienen concentrada en torno a su superficie un microclima único y rico en gases compatibles con la vida.
+
+La superficie se muestra profundamente enmarañada por toda esta compleja estructura de soportes y ramajes que atrapan y respiran su atmósfera orbital. A pesar de la densa maraña orgánica, no hay signos de alteración artificial del paisaje, conservando una pureza primigenia absoluta. Sin embargo, los sensores de alta resolución distinguen con claridad sobre el suelo a lo que parecen dos seres antropomorfos, uno de los cuales realiza gestos hacia el cielo, como si intentara comunicarse con la sonda observadora.
+
+Este planeta se alza así como un organismo durmiente en el cosmos, un santuario arbóreo donde la frontera entre la geología y la biología se difumina por completo."`,
+    nombreCientifico: 'H4Y3D0 D31 P31R0',
+    location: 'Pléyades 4R6U15',
+    coordinates: "42°19'03.9\"N 0°29'14.7\"W",
+    discoveryDate: '2026-10-25',
+    equipment: 'dji Mini 5 pro'
   }       
 ];
   
