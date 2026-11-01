@@ -859,6 +859,23 @@ Este planeta se alza así como un organismo durmiente en el cosmos, un santuario
     coordinates: "42°19'03.9\"N 0°29'14.7\"W",
     discoveryDate: '2026-10-25',
     equipment: 'dji Mini 5 pro'
+  },
+
+  {
+    slug: 'planeta-mars-perseverance',
+    name: 'Planeta Mars Perseverance',
+    image: '../../assets/planets/Planeta-Mars-Perseverance.jpg',
+    image360: '/pano360/PANO-Mars-Perseverance.jpg',
+    description: `En tiempos inmemoriales, la colisión cataclísmica de un cuerpo celeste con el planeta Marte provocó la expulsión de fragmentos y la formación de varios asteroides errantes en nuestro sistema solar. Uno de estos fascinantes caprichos planetarios, geológicamente idéntico al mismísimo Marte, de suelo ocráceo y rocas erosionadas por tormentas primigenias, vaga solitario por el cosmos.
+
+La imagen que acompaña este informe corresponde a un selfie capturado por la sonda SQLP-P3R53V3R4NC3, enviada por nuestra agencia para estudiar de cerca este cuerpo errante. La sonda nos transmite información valiosa de manera constante mientras vaga por el sistema solar sin ninguna órbita definida, desafiando las leyes de la mecánica celeste clásica.
+
+Debido a su peculiar deriva y rotación errática en el vacío, este miniplaneta experimenta ciclos temporales extremos: una sola noche en su superficie llega a durar 5 meses y 4 días, sumiendo al asteroide en una oscuridad prolongada bajo un firmamento de estrellas infinitas.`,
+    nombreCientifico: 'M4R5 P3R53V3R4NC3',
+    location: 'Galaxia 4R71571C4',
+    coordinates: "42°08'09.1\"N 0°21'10.4\"W",
+    discoveryDate: '2026-11-1',
+    equipment: 'PhotoCraft software'
   }       
 ];
   
