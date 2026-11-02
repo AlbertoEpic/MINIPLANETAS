@@ -884,10 +884,10 @@ Debido a su peculiar deriva y rotación errática en el vacío, este miniplaneta
     image360: '/pano360/PANO-Peiro.jpg',
     description: 'El Planeta Peiro emerge entre los pliegues del espacio-tiempo como un monolito de piedra y misterio. Sus formaciones geológicas, retorcidas en ángulos imposibles, sugieren que este mundo no fue formado por procesos naturales, sino por una civilización de arquitectos cósmicos desaparecida hace eones. Los sensores de largo alcance detectan sutiles vibraciones rítmicas en su núcleo, como si el propio planeta fuera un gigantesco receptor de señales interestelares. Aquellos que se han aventurado cerca de su superficie informan de una gravedad distorsionada y de una sensación de ser observados por ojos invisibles que habitan en las sombras de sus cañones. Peiro no es solo un cuerpo celeste; es una advertencia, una reliquia de una era en la que el universo era joven y las leyes de la física aún estaban por definirse.',
     nombreCientifico: 'P31R0',
-    location: 'Desconocido',
+    location: 'Pléyades 4R6U15',
     coordinates: "42°19'51.1\"N 0°29'46.6\"W",
     discoveryDate: '2026-11-01',
-    equipment: 'Desconocido'
+    equipment: 'DJI Mini 5 pro'
   }
 
 ];
