@@ -1,0 +1,30 @@
+# Reglas del Proyecto MiniPlanetas
+
+Este proyecto es una web de Astro para mostrar "Mini Planetas" (fotos 360 proyeccion estereográfica).
+
+## Flujo de Trabajo para Añadir Planetas
+
+Para añadir un nuevo planeta, SIEMPRE utiliza el script de automatización creado:
+
+```bash
+node scripts/add-planet.mjs "<nombre>" "<ruta_imagen>" "<descripcion>" [opciones]
+```
+
+### Parámetros del script:
+1. **Nombre**: El nombre público del planeta (ej. "Planeta Riglos").
+2. **Ruta Imagen**: Ruta a la imagen original (debe ser .jpg o .png). El script la copiará a `src/assets/planets/` si es necesario.
+3. **Descripción**: Relato ficticio sobre el planeta.
+4. **Opciones** (opcional): `location="..."`, `coordinates="..."`, `date="..."`, `equipment="..."`, `slug="..."`, `image360="..."`.
+
+### Pasos post-inserción:
+- Tras ejecutar el script, el archivo `src/data/planets.js` se actualizará automáticamente.
+- Las imágenes optimizadas se generarán en `public/planets-responsive/` y `public/planets-share/`.
+- Siempre verifica el resultado con `pnpm run dev`.
+
+## Estructura de Datos
+- Las imágenes originales están en `src/assets/planets/`.
+- Los datos maestros están en `src/data/planets.js`.
+- Los estilos globales están en `src/styles/`.
+
+## Despliegue
+- El despliegue se realiza en Cloudflare Pages mediante Wrangler: `pnpm run deploy`.
